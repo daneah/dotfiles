@@ -21,4 +21,4 @@ Mostly a list of useful aliases to save time/typing.
 
 ### `setTimezone.sh`
 
-This sets the timezone for machines with `/usr/share/zoneinfo`- and `/etc/localtime`-style timezone settings.
+This sets the timezone for machines with `/usr/share/zoneinfo` and `/etc/localtime` timezone settings.
