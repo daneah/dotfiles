@@ -6,7 +6,7 @@ Common configuration files and handy scripts to use when setting up or improving
 
 ### vimrc
 
-Configuration to improve the user experience of `VIM`. No fancy macros, just good highlighting and native settings along with a few `autocmd` definitions that VIM sometimes ships with.
+Configuration to improve the user experience of `VIM`. No fancy macros, just good highlighting and native settings along with a few `autocmd` definitions that `VIM` sometimes ships with.
 
 ### bashrc
 
