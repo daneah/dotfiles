@@ -24,8 +24,10 @@ set sidescrolloff=30
 set scrolloff=3
 
 " Highlight search matches in blue, matched brackets/parentheses in white
-highlight Search cterm=NONE ctermfg=gray ctermbg=blue
-highlight MatchParen ctermbg=234
+set hlsearch
+set incsearch
+highlight Search cterm=none ctermfg=black ctermbg=gray
+highlight MatchParen cterm=none ctermfg=none ctermbg=magenta
 
 " Pretty visible and navigable characters for :set list
 set listchars=tab:\|·,nbsp:~,trail:·,precedes:<,extends:>
