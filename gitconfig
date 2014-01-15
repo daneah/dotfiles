@@ -1,0 +1,8 @@
+[user]
+	name = Dane Hillard
+	email = dane@danehillard.com
+
+[alias]
+	info = remote show origin
+	ci = commit
+	st = status
