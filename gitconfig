@@ -5,4 +5,9 @@
 [alias]
 	info = remote show origin
 	ci = commit
-	st = status
+	st = status -sb
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
