@@ -27,7 +27,7 @@ set scrolloff=3
 set hlsearch
 set incsearch
 highlight Search cterm=none ctermfg=black ctermbg=gray
-highlight MatchParen cterm=none ctermfg=none ctermbg=magenta
+highlight MatchParen cterm=none ctermfg=magenta ctermbg=none
 
 " Pretty visible and navigable characters for :set list
 set listchars=tab:\|·,nbsp:~,trail:·,precedes:<,extends:>
