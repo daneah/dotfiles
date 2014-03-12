@@ -22,3 +22,6 @@ alias ci='vi'
 alias cd..='cd ..'
 alias sl='ls'
 alias snv='svn'
+
+# Convenience
+alias updatedb='sudo /usr/libexec/locate.updatedb'
