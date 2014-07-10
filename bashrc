@@ -26,3 +26,8 @@ alias ci='vi'
 alias cd..='cd ..'
 alias sl='ls'
 alias snv='svn'
+
+# Allow installation to system's Python modules
+syspip(){
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
