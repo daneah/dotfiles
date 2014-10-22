@@ -13,12 +13,12 @@ function git_branch
   then
     ref=$(git symbolic-ref HEAD)
     echo -e "$(git_color)"${ref#refs/heads/}"$(echo -e $ORIGINAL)"
-  fi  
+  fi
 }
 
 function git_color
 {
-  if [[ $(git status) == *"Changes not staged"* || $(git status) == *"Untracked files"* || $(git status) == *"Unmerged paths"* || $(git status) == *"Your branc>
+  if [[ $(git status) == *"Changes not staged"* || $(git status) == *"Untracked files"* || $(git status) == *"Unmerged paths"* || $(git status) == *"Your branch"* ]]
   then
     echo -e $RED
   elif [[ $(git status) == *"Changes to be committed"* ]]
@@ -26,7 +26,7 @@ function git_color
     echo -e $GREEN
   else
     echo -e $BLUE
-  fi  
+  fi
 }
 
 PS1="\$(git_branch)"$PS1
