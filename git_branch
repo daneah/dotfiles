@@ -18,7 +18,7 @@ function git_branch
 
 function git_color
 {
-  if [[ $(git status) == *"Changes not staged"* || $(git status) == *"Untracked files"* || $(git status) == *"Unmerged paths"* || $(git status) == *"Your branch is ahead"* || $(git_status) == *"Your branch is behind"* ]]
+  if [[ $(git status) == *"Changes not staged"* || $(git status) == *"Untracked files"* || $(git status) == *"Unmerged paths"* || $(git status) == *"Your branch is ahead"* || $(git status) == *"Your branch is behind"* ]]
   then
     echo -e $RED
   elif [[ $(git status) == *"Changes to be committed"* ]]
