@@ -1,5 +1,10 @@
 # /etc/bashrc
 
+# Don't repeat commands in history
+export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+
+[[ -f /etc/bash_aliases ]] && . /etc/bash_aliases
+
 # Sanity check for sensitive operations
 alias rm='rm -i'
 alias cp='cp -i'
@@ -31,3 +36,8 @@ alias snv='svn'
 syspip(){
     PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+
+# Mac-specific settings
+if [[ "$OSTYPE" == darwin* ]]; then
+	alias updatedb='/usr/libexec/locate.updatedb'
+fi
