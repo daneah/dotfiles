@@ -16,6 +16,8 @@ set softtabstop=4
 set shiftwidth=4
 
 set nowrap
+
+" Display line numbers
 set number
 
 " Scrolling options
