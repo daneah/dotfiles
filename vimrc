@@ -1,56 +1,64 @@
-" /etc/vimrc
-
 set nocompatible
 
-" Colorscheme that looks good across languages
-colorscheme delek
 syntax on
+colorscheme delek
 
-" Text editing
-set smartindent
 set autoindent
+set smartindent
+
+filetype plugin on
 filetype plugin indent on
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set number
 
 set nowrap
 
-" Display line numbers
-set number
+nmap <Leader>p :set paste!<CR>
+nmap <Leader>l :setlocal number!<CR>
 
-" Scrolling options
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+nmap ; :
+
+nmap <Up> <nop>
+nmap <Down> <nop>
+nmap <Left> <nop>
+nmap <Right> <nop>
+
 set sidescroll=1
 set sidescrolloff=30
 set scrolloff=3
 
-" Highlight search matches in blue, matched brackets/parentheses in white
-set hlsearch
-set incsearch
-highlight Search cterm=none ctermfg=black ctermbg=gray
-highlight MatchParen cterm=none ctermfg=magenta ctermbg=none
-
-" Pretty visible and navigable characters for :set list
+set backspace=indent,eol,start
 set listchars=tab:\|·,nbsp:~,trail:·,precedes:<,extends:>
 
-" Change title of window to indicate current file
-autocmd BufEnter * let &titlestring = "[" . hostname() . "] " . "vim: " . expand("%:p")
-if &term == "screen"
-    set t_ts=^[k
-    set t_fs=^[\
-endif
-if &term == "screen" || &term == "xterm"
-    set title
-endif
+set ruler
 
-" Jump to last known cursor position
-autocmd BufReadPost *
-  \ if line("'\"") > 1 && line("'\"") <= line("$") |
-  \   exe "normal! g`\"" |
-  \ endif
-
-" Misc
 set nobackup
-set backspace=indent,eol,start
-set history=50
+set noswapfile
+
+nmap <space> /
+
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END

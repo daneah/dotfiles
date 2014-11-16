@@ -1,13 +1,13 @@
 [user]
-	name = Dane Hillard
-	email = dane@danehillard.com
+	name = John Smith
+	email = john@smith.com
 
 [alias]
-	info = remote show origin
-	ci = commit
-	st = status -sb
+    info = remote show origin
+    st = status -sb
+    ci = commit
 
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+    branch = auto
+    diff = auto
+    status = auto
