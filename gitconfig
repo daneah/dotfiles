@@ -1,6 +1,6 @@
 [user]
-	name = John Smith
-	email = john@smith.com
+    name = John Smith
+    email = john@smith.com
 
 [alias]
     info = remote show origin
