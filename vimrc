@@ -1,7 +1,11 @@
 set nocompatible
+execute pathogen#infect()
+
+set t_Co=256
+colorscheme solarized
+set background=dark
 
 syntax on
-colorscheme delek
 
 set autoindent
 set smartindent
@@ -62,3 +66,5 @@ augroup resCur
   autocmd!
   autocmd BufWinEnter * call ResCur()
 augroup END
+
+set laststatus=2
