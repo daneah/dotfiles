@@ -1,3 +1,4 @@
+set mouse=a
 set nocompatible
 execute pathogen#infect()
 
