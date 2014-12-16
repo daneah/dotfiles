@@ -1,13 +1,10 @@
-[user]
-    name = John Smith
-    email = john@smith.com
-
 [alias]
     info = remote show origin
-    st = status -sb
     ci = commit
-
+    st = status -sb
 [color]
     branch = auto
     diff = auto
     status = auto
+[push]
+	default = simple
