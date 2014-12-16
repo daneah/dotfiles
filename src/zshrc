@@ -26,18 +26,18 @@ alias nsp='sudo nginx -s stop'
 alias wget='wget -c'
 
 upmaster() {
-    pushd $REPOS_HOME 2>&1 > /dev/null;
+    pushd $REPOS_HOME > /dev/null 2>&1;
     echo '\nUpdating master branches'
     echo '------------------------'
     for repo in `ls`; do
         echo
         echo $repo...
-        pushd $repo 2>&1 > /dev/null
+        pushd $repo > /dev/null 2>&1
         if [ $(git rev-parse --abbrev-ref HEAD) != "master" ]; then 
             git checkout master
         fi
         git fetch --dry-run > /dev/null || git pull
-        popd 2>&1 > /dev/null
+        popd > /dev/null 2>&1
     done
-    popd 2>&1 > /dev/null
+    popd > /dev/null 2>&1
 }
