@@ -39,3 +39,17 @@ upmaster() {
     done
     popd > /dev/null 2>&1
 }
+
+guni() {
+    local current_dir=`basename $(pwd)`
+    if [ -d $current_dir ]; then
+        if [ -f $current_dir/wsgi.py ]; then
+            echo Serving $current_dir with gunicorn...
+            gunicorn --reload -b 127.0.0.1:8080 $current_dir.wsgi &
+        else
+            echo "Error attempting to serve WSGI via gunicorn!"
+        fi
+    else
+        echo "Error attempting to serve WSGI via gunicorn!"
+    fi
+}
