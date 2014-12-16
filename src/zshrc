@@ -8,8 +8,6 @@ plugins=(git django virtualenvwrapper mvn npm pip python history history-substri
 
 source $ZSH/oh-my-zsh.sh
 
-workon sandbox
-
 export REPOS_HOME=${HOME}/source
 
 export JAVA_HOME=$(/usr/libexec/java_home)
