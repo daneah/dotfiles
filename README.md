@@ -11,3 +11,7 @@ Configuration to improve the user experience of `VIM`. No fancy macros, just goo
 ### `gitconfig`
 
 Configuration to provide convenience methods when using `git` on the command line.
+
+### `zshrc`
+
+Configuration, aliases, functions, and settings for making `zsh` even more awesome.
