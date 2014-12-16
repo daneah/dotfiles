@@ -1,20 +1,34 @@
-project_dir=`dirname $0` 
-src_dir=src
+pushd_quiet() {
+    local path=$1
+    pushd $path 2>&1 > /dev/null
+}
 
-pushd $project_dir 2>&1 > /dev/null
-
-if [ -d $src_dir ]; then
-    pushd $src_dir 2>&1 > /dev/null
-else
-    echo "No dotfiles were found during installation!"
+popd_quiet() {
     popd 2>&1 > /dev/null
-    exit 1
-fi
+}
 
-for dotfile in `ls`; do
-    full_path="$(cd "$(dirname "$dotfile")" && pwd)/$(basename "$dotfile")"
-    ln -i -s $full_path $HOME/.$dotfile
-done
+main() {
+    readonly local project_dir=`dirname $0` 
+    readonly local src_dir=src
 
-popd 2>&1 > /dev/null
-popd 2>&1 > /dev/null
+    pushd_quiet $project_dir
+    if [ $? -eq 0 ]; then
+        pushd_quiet $src_dir
+
+        if [ $? -eq 0 ]; then
+            readonly local dotfiles=`ls`
+
+            for dotfile in $dotfiles; do
+                local full_path="$(cd "$(dirname "$dotfile")" && pwd)/$(basename "$dotfile")"
+                ln -i -s $full_path $HOME/.$dotfile
+            done
+        fi
+
+        popd_quiet
+
+    else
+        popd_quiet
+    fi
+}
+
+main
