@@ -1,10 +1,10 @@
 pushd_quiet() {
     local path=$1
-    pushd $path 2>&1 > /dev/null
+    pushd $path > /dev/null 2>&1
 }
 
 popd_quiet() {
-    popd 2>&1 > /dev/null
+    popd > /dev/null 2>&1
 }
 
 main() {
@@ -22,10 +22,12 @@ main() {
                 local full_path="$(cd "$(dirname "$dotfile")" && pwd)/$(basename "$dotfile")"
                 ln -i -s $full_path $HOME/.$dotfile
             done
+        else
+            echo "No dotfiles were found during installation!"
+            popd_quiet
+            exit 1
         fi
-
         popd_quiet
-
     else
         popd_quiet
     fi
