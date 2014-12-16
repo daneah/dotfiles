@@ -33,8 +33,10 @@ upmaster() {
         echo
         echo $repo...
         pushd $repo 2>&1 > /dev/null
-        git checkout master
-        git pull
+        if [ $(git rev-parse --abbrev-ref HEAD) != "master" ]; then 
+            git checkout master
+        fi
+        git fetch --dry-run > /dev/null || git pull
         popd 2>&1 > /dev/null
     done
     popd 2>&1 > /dev/null
