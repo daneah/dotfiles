@@ -16,6 +16,6 @@ Configuration to provide convenience methods when using `git` on the command lin
 
 Configuration, aliases, functions, and settings for making `zsh` even more awesome.
 
-### hushlogin
+### `hushlogin`
 
 Tells Mac OS X not to include Last Login messages on shell startup.
