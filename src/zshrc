@@ -4,7 +4,7 @@ ZSH_THEME="kolo"
 
 ENABLE_CORRECTION="true"
 
-plugins=(git django virtualenvwrapper mvn npm pip python history history-substring-search)
+plugins=(bower brew django git history history-substring-search npm pip python virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
