@@ -53,3 +53,10 @@ guni() {
         echo "Error attempting to serve WSGI via gunicorn!"
     fi
 }
+
+look_for_process() {
+    local ps_name=$1
+    ps aux | grep $ps_name | grep -v grep
+}
+
+alias lfp='look_for_process'
