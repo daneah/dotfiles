@@ -24,20 +24,21 @@ alias nsp='sudo nginx -s stop'
 alias wget='wget -c'
 
 upmaster() {
-    pushd $REPOS_HOME > /dev/null 2>&1;
+    orig_dir=`pwd`
+    cd $REPOS_HOME > /dev/null 2>&1;
     echo '\nUpdating master branches'
     echo '------------------------'
     for repo in `ls`; do
         echo
         echo $repo...
-        pushd $repo > /dev/null 2>&1
+        cd $repo > /dev/null 2>&1
         if [ $(git rev-parse --abbrev-ref HEAD) != "master" ]; then 
             git checkout master
         fi
-        git fetch --dry-run > /dev/null || git pull
-        popd > /dev/null 2>&1
+        git pull
+        cd - > /dev/null 2>&1
     done
-    popd > /dev/null 2>&1
+    cd $orig_dir > /dev/null 2>&1
 }
 
 guni() {
