@@ -7,4 +7,4 @@
     diff = auto
     status = auto
 [push]
-	default = simple
+    default = simple
