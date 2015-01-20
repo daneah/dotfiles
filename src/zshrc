@@ -61,3 +61,5 @@ look_for_process() {
 }
 
 alias lfp='look_for_process'
+
+alias upfork='git fetch upstream; git checkout master; git merge upstream/master'
