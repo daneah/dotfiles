@@ -57,7 +57,7 @@ guni() {
 
 look_for_process() {
     local ps_name=$1
-    ps aux | grep $ps_name | grep -v grep
+    ps aux | grep -v grep | grep $ps_name
 }
 
 alias lfp='look_for_process'
