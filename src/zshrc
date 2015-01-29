@@ -10,6 +10,7 @@ source $ZSH/oh-my-zsh.sh
 
 export REPOS_HOME=${HOME}/source
 
+alias vi=vim
 export EDITOR=vim
 
 alias grep='grep -n --color=auto'
