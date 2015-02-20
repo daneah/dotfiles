@@ -2,6 +2,13 @@
 
 Common configuration files and handy scripts to use when setting up or improving a shell environment.
 
+## Installation
+```shell
+$ git clone https://github.com/daneah/dotfiles
+$ cd dotfiles
+$ ./install.zsh
+```
+
 ## Configuration Files
 
 ### `vimrc`
