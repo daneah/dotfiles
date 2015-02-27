@@ -33,6 +33,7 @@ upmaster() {
         echo $repo...
         cd $repo > /dev/null 2>&1
         if [ $(git rev-parse --abbrev-ref HEAD) != "master" ]; then 
+            git stash
             git checkout master
         fi
         git pull
