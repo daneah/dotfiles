@@ -24,7 +24,7 @@ alias nsp='sudo nginx -s stop'
 alias wget='wget -c'
 
 upmaster() {
-    orig_dir=`pwd`
+    local orig_dir=`pwd`
     cd $REPOS_HOME > /dev/null 2>&1;
     echo '\nUpdating master branches'
     echo '------------------------'
@@ -32,7 +32,7 @@ upmaster() {
         echo
         echo $repo...
         cd $repo > /dev/null 2>&1
-        current_branch=$(git rev-parse --abbrev-ref HEAD)
+        local current_branch=$(git rev-parse --abbrev-ref HEAD)
         if [ $current_branch != "master" ]; then 
             echo Currently on branch $current_branch
             git stash
