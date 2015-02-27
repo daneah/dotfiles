@@ -2,6 +2,7 @@
     info = remote show origin
     ci = commit
     st = status -sb
+    oops = reset --soft HEAD~1
 [color]
     branch = auto
     diff = auto
