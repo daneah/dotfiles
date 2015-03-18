@@ -23,14 +23,19 @@ alias nst='sudo nginx'
 alias nsp='sudo nginx -s stop'
 alias wget='wget -c'
 
-upmaster() {
+up() {
     local orig_dir=`pwd`
     cd $REPOS_HOME > /dev/null 2>&1;
-    echo '\nUpdating master branches'
-    echo '------------------------'
+    echo '\nUpdating repositories'
+    echo '====================='
     for repo in `ls`; do
+        local padded_repo_name_len=$((${#repo}+4))
         echo
-        echo $repo...
+        printf '_%.0s' {1..$padded_repo_name_len}
+        echo
+        echo "| $repo |"
+        printf '¯%.0s' {1..$padded_repo_name_len}
+        echo
         cd $repo > /dev/null 2>&1
         local current_branch=$(git rev-parse --abbrev-ref HEAD)
         if [ $current_branch != "master" ]; then 
