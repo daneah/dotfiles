@@ -22,6 +22,7 @@ alias nrd='sudo nginx -s reload'
 alias nst='sudo nginx'
 alias nsp='sudo nginx -s stop'
 alias wget='wget -c'
+alias gdi='git diff --ignore-all-space'
 
 up() {
     local orig_dir=`pwd`
