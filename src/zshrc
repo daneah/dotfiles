@@ -23,6 +23,7 @@ alias nst='sudo nginx'
 alias nsp='sudo nginx -s stop'
 alias wget='wget -c'
 alias gdi='git diff --ignore-all-space'
+alias gcb='git checkout -b'
 
 up() {
     local orig_dir=`pwd`
