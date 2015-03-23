@@ -30,13 +30,15 @@ up() {
     echo '\nUpdating repositories'
     echo '====================='
     for repo in `ls`; do
-        local padded_repo_name_len=$((${#repo}+4))
+        local padded_repo_name_len=$((${#repo}+2))
         echo
-        printf '_%.0s' {1..$padded_repo_name_len}
-        echo
-        echo "| $repo |"
-        printf '¯%.0s' {1..$padded_repo_name_len}
-        echo
+        echo -n ╔
+        printf '═%.0s' {1..$padded_repo_name_len}
+        echo ╗
+        echo "║ $repo ║"
+        echo -n ╚
+        printf '═%.0s' {1..$padded_repo_name_len}
+        echo ╝
         cd $repo > /dev/null 2>&1
         local current_branch=$(git rev-parse --abbrev-ref HEAD)
         if [ $current_branch != "master" ]; then 
@@ -45,6 +47,7 @@ up() {
             git checkout master
         fi
         git pull
+        git branch --merged | \grep -v "\*" | xargs -n 1 git branch -d
         cd - > /dev/null 2>&1
     done
     cd $orig_dir > /dev/null 2>&1
