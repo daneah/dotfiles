@@ -31,3 +31,6 @@
 [advice]
     statusHints = false
     detachedHead = false
+    pushNonFastForward = false
+    commitBeforeMerge = false
+    resolveConflict = false
