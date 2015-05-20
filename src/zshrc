@@ -24,6 +24,7 @@ alias nsp='sudo nginx -s stop'
 alias wget='wget -c'
 alias gdi='git diff --ignore-all-space'
 alias gcb='git checkout -b'
+alias grp='git grep -n'
 
 upr() {
     local repo=$1
