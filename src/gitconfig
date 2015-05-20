@@ -3,9 +3,23 @@
     ci = commit
     st = status -sb
     oops = reset --soft HEAD~1
-[color]
-    branch = auto
-    diff = auto
-    status = auto
+
+[color "status"]
+    header = blue
+    changed = yellow
+    added = green
+    untracked = red
+
+[color "branch"]
+    current = yellow
+    remote = red
+    local = blue
+
+[color "diff"]
+    meta = yellow
+    frag = blue
+    old = red
+    new = green
+
 [push]
     default = simple
