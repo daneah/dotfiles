@@ -4,6 +4,9 @@
     st = status -sb
     oops = reset --soft HEAD~1
 
+[diff]
+    mnemonicprefix = true
+
 [color "status"]
     header = blue
     changed = yellow
