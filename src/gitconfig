@@ -23,3 +23,7 @@
 
 [push]
     default = simple
+
+[advice]
+    statusHints = false
+    detachedHead = false
