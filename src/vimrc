@@ -17,6 +17,10 @@ set smartindent
 filetype plugin on
 filetype plugin indent on
 
+set undofile
+set undodir=~/.vim/undo
+
+
 set number
 
 set nowrap
