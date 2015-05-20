@@ -23,6 +23,7 @@ set nowrap
 
 nmap <Leader>p :set paste!<CR>
 nmap <Leader>l :setlocal number!<CR>
+nmap <Leader>r :setlocal relativenumber!<CR>
 
 set incsearch
 set hlsearch
