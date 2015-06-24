@@ -34,3 +34,6 @@
     pushNonFastForward = false
     commitBeforeMerge = false
     resolveConflict = false
+
+[include]
+    path = ~/.gitconfig.local
