@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=`which python3`
 
 ZSH_THEME="kolo"
 
