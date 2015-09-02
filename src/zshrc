@@ -11,6 +11,7 @@ plugins=(bower brew django docker git history history-substring-search httpie np
 source $ZSH/oh-my-zsh.sh
 
 export REPOS_HOME=${HOME}/source
+export PYTHONSTARTUP=${HOME}/.pystartup
 
 alias vi=vim
 export EDITOR=vim
