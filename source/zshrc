@@ -40,6 +40,7 @@ alias named='find . -name'
 alias wo='workon'
 alias scs='screen -S'
 alias scr='screen -r'
+alias rmf='rm -rf'
 
 upr() {
     local repo=$1
