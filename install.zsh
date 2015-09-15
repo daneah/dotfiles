@@ -9,7 +9,7 @@ popd_quiet() {
 
 main() {
     readonly local project_dir=`dirname $0` 
-    readonly local src_dir=src
+    readonly local src_dir=source
 
     pushd_quiet $project_dir
     if [ $? -eq 0 ]; then

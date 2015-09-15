@@ -37,6 +37,7 @@ alias pir='pip install -r '
 alias -g gv='| grep -v'
 alias -g s='| grep'
 alias named='find . -name'
+alias wo='workon'
 
 upr() {
     local repo=$1
