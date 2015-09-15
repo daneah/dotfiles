@@ -41,6 +41,8 @@ alias wo='workon'
 alias scs='screen -S'
 alias scr='screen -r'
 alias rmf='rm -rf'
+alias -g b64d='| base64 -D'
+alias -g b64='| base64'
 
 upr() {
     local repo=$1
