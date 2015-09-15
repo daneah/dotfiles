@@ -43,6 +43,9 @@ alias scr='screen -r'
 alias rmf='rm -rf'
 alias -g b64d='| base64 -D'
 alias -g b64='| base64'
+alias run='./manage.py runserver'
+alias pil='pip list'
+alias shell='./manage.py shell'
 
 upr() {
     local repo=$1
