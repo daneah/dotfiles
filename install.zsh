@@ -10,6 +10,7 @@ popd_quiet() {
 main() {
     readonly local project_dir=`dirname $0` 
     readonly local src_dir=source
+    readonly local custom_dir=${HOME}/.zsh-custom
 
     pushd_quiet $project_dir
     if [ $? -eq 0 ]; then
@@ -20,7 +21,7 @@ main() {
 
             for dotfile in $dotfiles; do
                 local full_path="$(cd "$(dirname "$dotfile")" && pwd)/$(basename "$dotfile")"
-                ln -i -s $full_path $HOME/.$dotfile
+                ln -i -s $full_path ${HOME}/.$dotfile
             done
         else
             echo "No dotfiles were found during installation!"
@@ -31,6 +32,16 @@ main() {
     else
         popd_quiet
     fi
+
+    if [ ! -d $custom_dir ]; then
+        mkdir $custom_dir
+    fi
+
+    if [ ! -d $custom_dir/themes ]; then
+        mkdir $custom_dir/themes
+    fi
+
+    cp $project_dir/kolo.zsh-theme $custom_dir/themes/kolo.zsh-theme
 }
 
 main
