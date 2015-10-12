@@ -1,19 +1,22 @@
+" use mouse if available
 if has('mouse')
     set mouse=a
 endif
 
 set nocompatible
+
+" include vim-pathogen
 execute pathogen#infect()
 
+" colorscheme
 set t_Co=256
 colorscheme solarized
 set background=dark
-
 syntax on
 
+" filetype-specific settings
 set autoindent
 set smartindent
-
 filetype plugin on
 filetype plugin indent on
 
@@ -28,11 +31,13 @@ nmap <Leader>p :set paste!<CR>
 nmap <Leader>l :setlocal number!<CR>
 nmap <Leader>r :setlocal relativenumber!<CR>
 
+" search
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
 
+" tabs
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -41,11 +46,13 @@ imap <S-Tab> <C-o><<
 
 nmap ; :
 
+" prude mode
 nmap <Up> <nop>
 nmap <Down> <nop>
 nmap <Left> <nop>
 nmap <Right> <nop>
 
+" scrolling
 set sidescroll=1
 set sidescrolloff=30
 set scrolloff=3
@@ -65,6 +72,7 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" jump to previously opened line
 function! ResCur()
   if line("'\"") <= line("$")
     normal! g`"
