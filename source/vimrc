@@ -36,6 +36,7 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+nnoremap <Leader><space> :nohlsearch<CR>
 
 " tabs
 set tabstop=4
