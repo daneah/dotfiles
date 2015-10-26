@@ -8,6 +8,7 @@ alias gdi='git diff --ignore-all-space'
 alias gcb='git checkout -b'
 alias grp='git grep -n'
 alias gcu='git gc --aggressive'
+alias glr='git rev-list --left-right --count master...'
 
 ##########
 # Python #
