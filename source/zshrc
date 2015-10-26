@@ -11,7 +11,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 
 DISABLE_UPDATE_PROMPT=true
 
-plugins=(bower brew django docker git history history-substring-search httpie npm pip python osx supervisor virtualenvwrapper vagrant zsh-syntax-highlighting)
+plugins=(bower brew django docker git history history-substring-search httpie npm pip python osx rvm supervisor virtualenvwrapper vagrant zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,3 +80,5 @@ look_for_process() {
 alias lfp='look_for_process'
 
 alias upfork='git fetch upstream; git checkout master; git merge upstream/master'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
