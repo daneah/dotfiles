@@ -9,6 +9,7 @@ alias gcb='git checkout -b'
 alias grp='git grep -n'
 alias gcu='git gc --aggressive'
 alias glr='git rev-list --left-right --count master...'
+alias gmb='git merge-base $(current_branch) master'
 
 ##########
 # Python #
