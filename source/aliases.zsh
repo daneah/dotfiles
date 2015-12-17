@@ -19,6 +19,7 @@ alias gmb='git merge-base $(current_branch) master'
 alias upip='pip freeze --local | \grep -v "^\-e" | cut -d = -f 1  | xargs -n1 pip install -U'
 alias pir='pip install -r '
 alias pil='pip list'
+alias pie='pip install -e'
 
 # virtualenv(wrapper)
 alias wo='workon'
