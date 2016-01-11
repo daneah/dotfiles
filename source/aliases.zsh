@@ -1,3 +1,7 @@
+# odds and ends
+alias lfp='look_for_process'
+alias upfork='git fetch upstream; git checkout master; git merge upstream/master'
+
 # nginx
 alias nst='sudo nginx'
 alias nrd='sudo nginx -s reload'

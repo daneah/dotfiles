@@ -78,9 +78,5 @@ look_for_process() {
     ps aux | grep -v grep | grep $ps_name
 }
 
-alias lfp='look_for_process'
-
-alias upfork='git fetch upstream; git checkout master; git merge upstream/master'
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.node/bin" # Add node to PATH
