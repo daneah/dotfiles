@@ -21,8 +21,9 @@ upr() {
         git pull
         echo "Checking for merged branches..."
         git branch --merged | \grep -v "\*" | xargs -n 1 git branch -d
-        cd - > /dev/null 2>&1
     fi
+
+    cd - > /dev/null 2>&1
 }
 
 up() {
