@@ -11,15 +11,18 @@ upr() {
     echo ╝
     cd $repo > /dev/null 2>&1
     local current_branch=$(git rev-parse --abbrev-ref HEAD)
-    if [ $current_branch != "master" ]; then 
+    if [ "$current_branch" != "master" ] && [ "x$current_branch" != "x" ]; then 
         echo Currently on branch $current_branch
         git stash
         git checkout master
     fi
-    git pull
-    echo "Checking for merged branches..."
-    git branch --merged | \grep -v "\*" | xargs -n 1 git branch -d
-    cd - > /dev/null 2>&1
+
+    if [ "x$current_branch" != "x" ]; then
+        git pull
+        echo "Checking for merged branches..."
+        git branch --merged | \grep -v "\*" | xargs -n 1 git branch -d
+        cd - > /dev/null 2>&1
+    fi
 }
 
 up() {
