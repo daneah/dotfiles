@@ -1,6 +1,7 @@
 # odds and ends
 alias lfp='look_for_process'
 alias upfork='git fetch upstream; git checkout master; git merge upstream/master'
+alias updb='sudo /usr/libexec/locate.updatedb'
 
 # nginx
 alias nst='sudo nginx'
