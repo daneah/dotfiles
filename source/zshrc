@@ -11,7 +11,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 
 DISABLE_UPDATE_PROMPT=true
 
-plugins=(bower brew django docker git history history-substring-search httpie npm pip python osx rvm supervisor virtualenvwrapper vagrant zsh-syntax-highlighting)
+plugins=(brew django git history history-substring-search npm pip python osx rvm supervisor virtualenvwrapper zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
