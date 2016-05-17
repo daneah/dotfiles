@@ -31,7 +31,6 @@ alias pie='pip install -e'
 alias wo='workon'
 
 # Django
-alias ./manage.py='nocorrect ./manage.py'
 alias run='./manage.py runserver'
 alias shell='./manage.py shell'
 
