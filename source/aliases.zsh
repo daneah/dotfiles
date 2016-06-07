@@ -40,8 +40,8 @@ alias shell='./manage.py shell'
 
 # grep
 alias grep='grep -n --color=auto'
-alias -g gv='| grep -v'
-alias -g s='| grep'
+alias -g gv='| \grep -v'
+alias -g s='| \grep'
 
 # screen
 alias scs='screen -S'
