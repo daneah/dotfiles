@@ -1,5 +1,8 @@
 upr() {
     local repo=$1
+    if [[ ! $repo ]]; then
+        repo=.
+    fi
     local padded_repo_name_len=$((${#repo}+2))
     echo
     echo -n ╔
