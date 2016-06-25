@@ -30,5 +30,5 @@ export EDITOR=vim
 export PATH="$PATH:$HOME/.node/bin" # Add node to PATH
 export PATH="$PATH:$HOME/.npm-packages/bin" # Add node to PATH
 export PATH="$PATH:$HOME/.gem/ruby/2.0.0/bin"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
