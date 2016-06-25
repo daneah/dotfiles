@@ -1,6 +1,6 @@
 google() {
     local query="$*"
-    open -a /Applications/Google\ Chrome.app "https://www.google.com/search?q=${query}"
+    open "https://www.google.com/search?q=${query}"
 }
 
 upr() {
