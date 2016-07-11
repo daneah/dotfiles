@@ -1,3 +1,8 @@
+google() {
+    local query="$*"
+    open "https://www.google.com/search?q=${query}"
+}
+
 upr() {
     local repo=$1
     if [[ ! $repo ]]; then
