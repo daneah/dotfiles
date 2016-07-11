@@ -16,6 +16,7 @@ alias grp='git grep -n'
 alias gcu='git gc --aggressive'
 alias glr='git rev-list --left-right --count master...'
 alias gmb='git merge-base $(current_branch) master'
+alias since='git log --oneline --decorate $(git merge-base --fork-point master)..HEAD'
 
 ##########
 # Python #
