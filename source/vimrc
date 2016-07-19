@@ -88,6 +88,4 @@ augroup END
 
 set laststatus=2
 
-" markdown filetype usually gets overridden by modula2
-au BufRead,BufNewFile *.md set syntax=markdown
 set nofoldenable
