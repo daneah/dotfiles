@@ -1,6 +1,10 @@
-python3
-mysql
-ccat
-readline
-node
 caskroom/cask/brew-cask
+
+ack
+ccat
+jq
+mysql
+node
+python3
+readline
+rvm
