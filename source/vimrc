@@ -89,3 +89,6 @@ augroup END
 set laststatus=2
 
 set nofoldenable
+
+" Set UTF-8 encoding for universal use
+set encoding=utf-8
