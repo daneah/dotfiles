@@ -6,16 +6,18 @@ google() {
 upr() {
     local repo=$1
     : ${repo:=.}
-    local padded_repo_name_len=$((${#repo}+2))
+    cd $repo > /dev/null 2>&1
+    local repo_dir=$(git rev-parse --show-toplevel)
+    local repo_name=$(basename $repo_dir)
+    local padded_repo_name_len=$((${#repo_name}+2))
     echo
     echo -n ╔
     printf '═%.0s' {1..$padded_repo_name_len}
     echo ╗
-    echo "║ $repo ║"
+    echo "║ $repo_name ║"
     echo -n ╚
     printf '═%.0s' {1..$padded_repo_name_len}
     echo ╝
-    cd $repo > /dev/null 2>&1
     local current_branch=$(git rev-parse --abbrev-ref HEAD)
     if [ "$current_branch" != "master" ] && [ "x$current_branch" != "x" ]; then 
         echo Currently on branch $current_branch
