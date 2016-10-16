@@ -1,3 +1,6 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 " use mouse if available
 if has('mouse')
     set mouse=a
