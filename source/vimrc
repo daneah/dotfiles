@@ -5,9 +5,6 @@ endif
 
 set nocompatible
 
-" include vim-pathogen
-execute pathogen#infect()
-
 " colorscheme
 set t_Co=256
 colorscheme solarized
