@@ -4,7 +4,9 @@ ack
 ccat
 jq
 mysql
+sqlite
 node
 python3
 readline
 rvm
+tree
