@@ -1,0 +1,9 @@
+[submodule "source/vim/pack/daneah/start/vim-colors-solarized"]
+	path = source/vim/pack/daneah/start/vim-colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule "source/vim/pack/daneah/start/vim-gitgutter"]
+	path = source/vim/pack/daneah/start/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
+[submodule "source/vim/pack/daneah/start/vim-markdown"]
+	path = source/vim/pack/daneah/start/vim-markdown
+	url = git@github.com:plasticboy/vim-markdown.git

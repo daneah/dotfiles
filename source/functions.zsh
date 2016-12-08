@@ -61,7 +61,7 @@ guni() {
 
 look_for_process() {
     local ps_name=$1
-    ps aux | grep -v grep | grep $ps_name
+    ps aux | \grep -v grep | \grep --color $ps_name
 }
 
 function setjdk() {

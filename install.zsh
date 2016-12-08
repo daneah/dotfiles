@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 
 pushd_quiet() {
     local path_to_push_to=$1
