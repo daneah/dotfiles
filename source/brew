@@ -2,6 +2,7 @@ caskroom/cask/brew-cask
 
 ack
 ccat
+gpg
 jq
 mysql
 sqlite
