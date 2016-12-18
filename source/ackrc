@@ -2,3 +2,4 @@
 --ignore-dir=node_modules/
 --ignore-dir=.sass-cache/
 --ignore-dir=__pycache__/
+--ignore-file=is:scss_lint.xml
