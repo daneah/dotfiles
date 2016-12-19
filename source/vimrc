@@ -26,6 +26,8 @@ set undodir=~/.vim/undo
 set number
 
 set nowrap
+set textwidth=120
+set colorcolumn=+1
 
 nmap <Leader>p :set paste!<CR>
 nmap <Leader>l :setlocal number!<CR>
@@ -48,6 +50,10 @@ imap <S-Tab> <C-o><<
 nmap ; :
 
 " prude mode
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
 nmap <Up> <nop>
 nmap <Down> <nop>
 nmap <Left> <nop>
@@ -57,9 +63,12 @@ nmap <Right> <nop>
 set sidescroll=1
 set sidescrolloff=30
 set scrolloff=3
+nnoremap j gj
+nnoremap k gk
 
 set backspace=indent,eol,start
 set listchars=tab:\|·,nbsp:~,trail:·,precedes:<,extends:>
+set list
 
 set ruler
 
@@ -68,10 +77,14 @@ set noswapfile
 
 nmap <space> /
 
+" splits
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+
+set splitbelow
+set splitright
 
 " jump to previously opened line
 function! ResCur()
@@ -92,3 +105,12 @@ set nofoldenable
 
 " Set UTF-8 encoding for universal use
 set encoding=utf-8
+
+" underlining
+nnoremap <Leader>= yypv$r=
+nnoremap <Leader>- yypv$r-
+nnoremap <Leader>- yypv$r#
+nnoremap <Leader>- yypv$r"
+nnoremap <Leader>U yypv$r━
+
+set clipboard=unnamed
