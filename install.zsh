@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+ZSH_THEME=kolo.zsh-theme
+
 pushd_quiet() {
     local path_to_push_to=$1
     pushd $path_to_push_to > /dev/null 2>&1
@@ -10,7 +12,7 @@ popd_quiet() {
 }
 
 main() {
-    readonly local project_dir=`dirname $0` 
+    readonly local project_dir=`dirname $0`
     readonly local src_dir=source
     readonly local custom_dir=${HOME}/.zsh-custom
 
@@ -22,7 +24,9 @@ main() {
         if [ $? -eq 0 ]; then
             for dotfile in $(ls); do
                 local full_path="$(cd "$(dirname "$dotfile")" && pwd)/$(basename "$dotfile")"
-                ln -i -s $full_path ${HOME}/.$dotfile
+                if [ "$(readlink -- "${HOME}/.$dotfile")" != "$full_path" ]; then
+                    ln -i -s $full_path ${HOME}/.$dotfile
+                fi
             done
         else
             echo "No dotfiles were found during installation!"
@@ -34,10 +38,12 @@ main() {
         popd_quiet
     fi
 
-    mkdir -p $custom_dir
-    mkdir -p $custom_dir/themes
+    themes_dir=$custom_dir/themes
+    theme_file=$themes_dir/$ZSH_THEME
+    theme_template=$project_dir/$ZSH_THEME
 
-    cp $project_dir/kolo.zsh-theme $custom_dir/themes/kolo.zsh-theme
+    mkdir -p $themes_dir
+    cmp --silent $theme_template $theme_file || cp $theme_template $theme_file
 }
 
 main
