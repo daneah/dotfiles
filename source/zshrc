@@ -13,7 +13,28 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 
 DISABLE_UPDATE_PROMPT=true
 
-plugins=(brew bundler django gem git history history-substring-search httpie jira npm osx pip python redis-cli rvm screen supervisor virtualenvwrapper z zsh-syntax-highlighting)
+plugins=( \
+    brew \
+    bundler \
+    django \
+    gem \
+    git \
+    history \
+    history-substring-search \
+    httpie \
+    jira \
+    npm \
+    osx \
+    pip \
+    python \
+    redis-cli \
+    rvm \
+    screen \
+    supervisor \
+    virtualenvwrapper \
+    z \
+    zsh-syntax-highlighting \
+)
 
 source $ZSH/oh-my-zsh.sh
 
