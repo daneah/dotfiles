@@ -39,8 +39,7 @@ set undodir=~/.vim/undo
 
 " Text Width {{{
 set nowrap
-set textwidth=120
-set colorcolumn=+1
+set colorcolumn=120
 " }}}
 
 " Paste Formatting {{{
