@@ -1,3 +1,7 @@
+update_ctags() {
+    ctags -R --fields=+l --languages=python --python-kinds=-iv -f ./.tags $(python -c "import os, sys; print(' '.join('{}'.format(d) for d in sys.path if os.path.isdir(d)))") ./
+}
+
 google() {
     local query="$*"
     open "https://www.google.com/search?q=${query}"

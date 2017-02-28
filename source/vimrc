@@ -30,6 +30,7 @@ set autoindent
 set smartindent
 filetype plugin on
 filetype plugin indent on
+set tags=.tags;/
 " }}}
 
 " Undo {{{
