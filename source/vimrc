@@ -31,6 +31,7 @@ set smartindent
 filetype plugin on
 filetype plugin indent on
 autocmd BufNewFile,BufRead *.p8   set syntax=lua
+set tags=.tags;/
 " }}}
 
 " Undo {{{
