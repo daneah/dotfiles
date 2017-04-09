@@ -48,6 +48,10 @@ if [ -f ${HOME}/.functions.zsh ]; then
     . ${HOME}/.functions.zsh
 fi
 
+if [ -f ${HOME}/.profile ]; then
+    . ${HOME}/.profile
+fi
+
 export PYTHONSTARTUP=${HOME}/.pystartup
 export EDITOR=vim
 export PATH="$PATH:$HOME/.node/bin" # Add node to PATH
