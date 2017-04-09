@@ -1,4 +1,4 @@
-caskroom/cask/brew-cask
+caskroom/cask
 
 ack
 ccat
@@ -11,3 +11,4 @@ python3
 readline
 rvm
 tree
+vim
