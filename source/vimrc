@@ -132,6 +132,7 @@ augroup END
 set laststatus=2
 set ruler
 set wildmenu
+set statusline+=%F
 " }}}
 
 " Folding {{{
