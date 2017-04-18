@@ -6,7 +6,7 @@ Common configuration files and handy scripts to use when setting up or improving
 ```shell
 $ git clone https://github.com/daneah/dotfiles
 $ cd dotfiles
-$ git submodule --init --recursive
+$ git submodule update --init --recursive
 $ ./install.zsh
 ```
 
