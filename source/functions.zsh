@@ -11,7 +11,7 @@ upr() {
     local repo=$1
     : ${repo:=.}
     cd $repo > /dev/null 2>&1
-    local repo_dir=$(git rev-parse --show-toplevel 2>&1 > /dev/null || pwd)
+    local repo_dir=$(git rev-parse --show-toplevel)
     local repo_name=$(basename $repo_dir)
     local padded_repo_name_len=$((${#repo_name}+2))
     echo
