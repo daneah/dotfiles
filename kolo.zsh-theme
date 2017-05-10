@@ -18,7 +18,7 @@ theme_precmd () {
 setopt prompt_subst
 PROMPT='
 %B%F{green}%n %B%F{yellow}at %B%F{magenta}%~ %B%F{yellow}on %B%F{blue}%M%B%F{green}${vcs_info_msg_0_} %{$reset_color%}
-%(!.#.$) '
+%{$(iterm2_prompt_mark)%}%(!.#.$) '
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
