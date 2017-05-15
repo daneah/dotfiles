@@ -57,7 +57,6 @@ export PYTHONDONTWRITEBYTECODE=1
 
 export EDITOR=vim
 export PATH="$PATH:$HOME/.node/bin" # Add node to PATH
-export PATH="$PATH:$HOME/.npm-packages/bin" # Add node to PATH
 export PATH="$PATH:$HOME/.gem/ruby/2.0.0/bin"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
