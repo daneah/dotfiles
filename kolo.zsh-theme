@@ -15,20 +15,19 @@ theme_precmd () {
     vcs_info
 }
 
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 setopt prompt_subst
 PROMPT='
-%B%F{green}%n %B%F{yellow}at %B%F{magenta}%~ %B%F{yellow}on %B%F{blue}%M%B%F{green}${vcs_info_msg_0_} %{$reset_color%}
-%{$(iterm2_prompt_mark)%} '
+%{$(iterm2_prompt_mark)%}%B%F{white}$(virtualenv_info)%B%F{green}%n %B%F{yellow}at %B%F{magenta}%~ %B%F{yellow}on %B%F{blue}%M%B%F{green}${vcs_info_msg_0_} %{$reset_color%}
+%(!.#.$) '
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
 
 function virtualenv_info(){
-    [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`')'
+    [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
-
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-RPROMPT='%B%F{white}$(virtualenv_info)%{$reset_color%}'
 
 autoload -U zmv
 
