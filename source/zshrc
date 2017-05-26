@@ -20,7 +20,6 @@ plugins=( \
     gem \
     git \
     history \
-    history-substring-search \
     httpie \
     jira \
     npm \
@@ -34,6 +33,7 @@ plugins=( \
     virtualenvwrapper \
     z \
     zsh-syntax-highlighting \
+    history-substring-search \
 )
 
 source $ZSH/oh-my-zsh.sh
