@@ -35,6 +35,7 @@ alias pup='pip install -U pip'
 
 # virtualenv(wrapper)
 alias wo='workon'
+alias de='deactivate'
 
 # Django
 alias run='./manage.py runserver'
