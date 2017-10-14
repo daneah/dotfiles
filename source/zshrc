@@ -11,6 +11,11 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 
 DISABLE_UPDATE_PROMPT=true
 
+EXTENDED_HISTORY=true
+SHARE_HISTORY=true
+HIST_IGNORE_ALL_DUPS=true
+HIST_REDUCE_BLANKS=true
+
 plugins=( \
     brew \
     bundler \
