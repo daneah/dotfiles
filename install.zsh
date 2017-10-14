@@ -12,7 +12,7 @@ popd_quiet() {
 }
 
 main() {
-    readonly local project_dir=`dirname $0`
+    readonly local project_dir=${0:a:h}
     readonly local src_dir=source
     readonly local custom_dir=${HOME}/.zsh-custom
 
@@ -43,7 +43,7 @@ main() {
     theme_template=$project_dir/$ZSH_THEME
 
     mkdir -p $themes_dir
-    cmp --silent $theme_template $theme_file || cp $theme_template $theme_file
+    ln -sf $theme_template $theme_file
 }
 
 main
