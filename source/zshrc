@@ -11,11 +11,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 
 DISABLE_UPDATE_PROMPT=true
 
-EXTENDED_HISTORY=true
-SHARE_HISTORY=true
-HIST_IGNORE_ALL_DUPS=true
-HIST_REDUCE_BLANKS=true
-
 plugins=( \
     brew \
     bundler \
@@ -40,6 +35,9 @@ plugins=( \
 )
 
 source $ZSH/oh-my-zsh.sh
+
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
 
 if [ -f ${HOME}/.aliases.zsh ]; then
     . ${HOME}/.aliases.zsh
