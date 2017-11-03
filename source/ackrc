@@ -4,3 +4,4 @@
 --ignore-dir=__pycache__/
 --ignore-file=is:scss_lint.xml
 --ignore-dir=match:.egg-info/
+--color-match=bold red
