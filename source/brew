@@ -9,6 +9,6 @@ sqlite
 node
 python3
 readline
-rvm
 tree
 vim
+httpie
