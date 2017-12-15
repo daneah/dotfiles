@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 ZSH_THEME=kolo.zsh-theme
+INVOKE_COMPLETION=invoke-completion.zsh
 
 pushd_quiet() {
     local path_to_push_to=$1
@@ -41,9 +42,11 @@ main() {
     themes_dir=$custom_dir/themes
     theme_file=$themes_dir/$ZSH_THEME
     theme_template=$project_dir/$ZSH_THEME
+    invoke_completion=$project_dir/$INVOKE_COMPLETION
 
     mkdir -p $themes_dir
     ln -sf $theme_template $theme_file
+    ln -sf $invoke_completion $custom_dir/$INVOKE_COMPLETION
 }
 
 main
