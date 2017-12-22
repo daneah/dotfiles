@@ -107,6 +107,7 @@ set splitright
 " List Chars {{{
 set listchars=tab:\|·,nbsp:~,trail:·,precedes:<,extends:>
 set list
+match ErrorMsg '\s\+$'
 " }}}
 
 " Temporary Files {{{
