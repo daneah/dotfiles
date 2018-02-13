@@ -19,7 +19,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 setopt prompt_subst
 PROMPT='
-%{$(iterm2_prompt_mark)%}%B%F{white}$(virtualenv_info)%B%F{green}%n %B%F{yellow}at %B%F{magenta}%~ %B%F{yellow}on %B%F{blue}%M%B%F{green}${vcs_info_msg_0_} %{$reset_color%}
+%{$(iterm2_prompt_mark)%}%B%F{white}$(get_env 2&> /dev/null) $(virtualenv_info)%B%F{green}%n %B%F{yellow}at %B%F{magenta}%~ %B%F{yellow}on %B%F{blue}%M%B%F{green}${vcs_info_msg_0_} %{$reset_color%}
 %(?..%B%F{red})%(2L.%L.)%(!.#.$)%{$reset_color%} '
 
 autoload -U add-zsh-hook
