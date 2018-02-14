@@ -34,6 +34,7 @@ alias prq='pip install -r requirements.txt'
 alias pil='pip list'
 alias pie='pip install -e'
 alias pup='pip install -U pip'
+alias psh='pipenv shell'
 
 # virtualenv(wrapper)
 alias wo='workon'
