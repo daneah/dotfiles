@@ -34,9 +34,10 @@ function formatted_location_info(){
 }
 
 function gemset_info(){
-    readonly local gemset=$(rvm-prompt g 2&> /dev/null)
+    local gemset=$(rvm-prompt g 2&> /dev/null)
     if [ -n "$gemset" ]; then
-        echo " ♦️ $gemset"
+        gemset=${gemset#"@"}
+        echo " ♦ $gemset"
     fi
 }
 
