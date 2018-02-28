@@ -35,6 +35,8 @@ upr() {
         git branch --merged | \grep -v "\*" | xargs -n 1 git branch -d
     fi
 
+    git remote prune origin
+
     cd - > /dev/null 2>&1
 }
 
