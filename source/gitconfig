@@ -15,7 +15,7 @@
     untracked = red
 
 [color "branch"]
-    current = yellow
+    current = yellow bold
     remote = red
     local = blue
 
@@ -45,3 +45,6 @@
 
 [status]
     showUntrackedFiles = all
+
+[merge]
+    log = true
