@@ -19,15 +19,11 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 setopt prompt_subst
 PROMPT='
-%{$(iterm2_prompt_mark)%}%B%F{white}$(env_info)$(virtualenv_info)$(formatted_location_info)%B%F{red}$(gemset_info)%B%F{green}${vcs_info_msg_0_}%{$reset_color%}
+%{$(iterm2_prompt_mark)%}%B%F{white}$(env_info)($(pyenv_prompt_info)) $(formatted_location_info)%B%F{red}$(gemset_info)%B%F{green}${vcs_info_msg_0_}%{$reset_color%}
 %(?..%B%F{red})%(2L.%L.)%(!.#.$)%{$reset_color%} '
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
-
-function virtualenv_info(){
-    [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
-}
 
 function formatted_location_info(){
     echo '%B%F{green}%n %B%F{yellow}at %B%F{magenta}%~ %B%F{yellow}on %B%F{blue}%M'
