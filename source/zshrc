@@ -21,8 +21,8 @@ plugins=( \
     npm \
     osx \
     pip \
-    python \
     pyenv \
+    python \
     redis-cli \
     rvm \
     screen \
