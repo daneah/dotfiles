@@ -23,7 +23,7 @@ upr() {
     printf '═%.0s' {1..$padded_repo_name_len}
     echo ╝
     local current_branch=$(git rev-parse --abbrev-ref HEAD)
-    if [ "$current_branch" != "master" ] && [ "x$current_branch" != "x" ]; then 
+    if [ "$current_branch" != "master" ] && [ "x$current_branch" != "x" ]; then
         echo Currently on branch $current_branch
         git stash
         git checkout master
@@ -31,7 +31,7 @@ upr() {
 
     if [ "x$current_branch" != "x" ]; then
         git pull
-        echo "Checking for merged branches..."
+        echo "Checking for branches merged to master..."
         git branch --merged | \grep -v "\*" | xargs -n 1 git branch -d
     fi
 
