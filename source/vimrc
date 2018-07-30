@@ -32,6 +32,7 @@ filetype plugin on
 filetype plugin indent on
 autocmd BufNewFile,BufRead *.p8   set syntax=lua
 autocmd BufNewFile,BufRead *.vue set filetype=html
+autocmd BufNewFile,BufRead *.ad set filetype=asciidoc
 set tags=.tags;/
 " }}}
 
