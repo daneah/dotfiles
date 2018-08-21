@@ -64,5 +64,3 @@ export PATH="${HOME}/.rvm/bin:${PATH}" # Add RVM to PATH for scripting
 ssh-add -A &>/dev/null
 
 export PYENV_ROOT="${HOME}/.pyenv"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
