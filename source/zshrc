@@ -13,11 +13,13 @@ plugins=( \
     brew \
     bundler \
     django \
+    docker \
     gem \
     git \
     history \
     httpie \
     jira \
+    kubectl \
     npm \
     osx \
     pip \
