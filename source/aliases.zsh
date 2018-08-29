@@ -22,6 +22,8 @@ alias gmb='git merge-base $(current_branch) master'
 alias since='git log --oneline --decorate $(git merge-base --fork-point master)..HEAD'
 alias gdw='git diff --color-words'
 alias gst='git status -sb'
+alias goo='git oops'
+alias gun='git unstage'
 
 ##########
 # Python #
