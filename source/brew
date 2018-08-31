@@ -1,14 +1,16 @@
 caskroom/cask
 
 ack
+bat
 ccat
 gpg
+httpie
 jq
 mysql
-sqlite
 node
 python3
 readline
+sqlite
 tree
 vim
-httpie
+zsh
