@@ -12,6 +12,11 @@ $ ./install.zsh
 
 ## Configuration Files
 
+### `ackrc`
+
+Configuration for `ack`.
+Ignores several common generated output directory patterns.
+
 ### `aliases.zsh`
 
 Command aliases that work in `zsh` but may not be safe for other shells.
@@ -27,10 +32,11 @@ Function definitions useful in `zsh` that may not be safe for other shells.
 ### `gitconfig`
 
 Configuration to provide convenience methods when using `git` on the command line.
+Supports an untracked `~/.gitconfig.local` file to avoid committing sensitive information
 
 ### `hushlogin`
 
-Tells Mac OS X not to include Last Login messages on shell startup.
+Tells macOS not to include Last Login messages on shell startup.
 
 ### `npmrc`
 
