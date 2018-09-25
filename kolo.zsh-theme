@@ -43,7 +43,7 @@ function aws_vault_info(){
 function virtualenv_info(){
     if [ pyenv_prompt_info ]; then
         if [ $VIRTUAL_ENV ]; then
-            echo '('$(basename $VIRTUAL_ENV)') '
+            echo '%B%F{white}('$(basename $VIRTUAL_ENV)') '
         else
             echo '%B%F{white}('$(pyenv_prompt_info)') '
         fi
