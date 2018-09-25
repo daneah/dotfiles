@@ -19,7 +19,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 setopt prompt_subst
 PROMPT='
-%{$(iterm2_prompt_mark)%}%B%F{white}$(env_info)$(virtualenv_info)$(formatted_location_info)%B%F{red}$(gemset_info)%{$reset_color%}$(kubernetes_context)%B%F{green}${vcs_info_msg_0_}%{$reset_color%}
+%{$(iterm2_prompt_mark)%}$(env_info)$(aws_vault_info)$(virtualenv_info)$(formatted_location_info)%B%F{red}$(gemset_info)$(kubernetes_context)%B%F{green}${vcs_info_msg_0_}%{$reset_color%}
 %(?..%B%F{red})%(2L.%L.)%(!.#.$)%{$reset_color%} '
 
 autoload -U add-zsh-hook
@@ -34,12 +34,18 @@ function kubernetes_context(){
     echo '%B%F{033} ☸︎' $k8s_context
 }
 
+function aws_vault_info(){
+    if [ $AWS_VAULT ]; then
+        echo "%B%F{208}[$AWS_VAULT] "
+    fi
+}
+
 function virtualenv_info(){
     if [ pyenv_prompt_info ]; then
         if [ $VIRTUAL_ENV ]; then
             echo '('$(basename $VIRTUAL_ENV)') '
         else
-            echo '('$(pyenv_prompt_info)') '
+            echo '%B%F{white}('$(pyenv_prompt_info)') '
         fi
     fi
 }
@@ -55,7 +61,7 @@ function gemset_info(){
 function env_info(){
     readonly local env=$(get_env 2&> /dev/null)
     if [ -n "$env" ]; then
-        echo "${env} "
+        echo "%B%F{white}${env} "
     fi
 }
 
