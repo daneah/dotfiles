@@ -14,6 +14,7 @@ upr() {
     local repo_dir=$(git rev-parse --show-toplevel)
     local repo_name=$(basename $repo_dir)
     local padded_repo_name_len=$((${#repo_name}+2))
+    local default_branch_name=$(git remote show origin | \grep "HEAD branch" | cut -d ":" -f 2 | tr -d '[:space:]')
     echo
     echo -n ╔
     printf '═%.0s' {1..$padded_repo_name_len}
@@ -23,15 +24,15 @@ upr() {
     printf '═%.0s' {1..$padded_repo_name_len}
     echo ╝
     local current_branch=$(git rev-parse --abbrev-ref HEAD)
-    if [ "$current_branch" != "master" ] && [ "x$current_branch" != "x" ]; then
+    if [ "$current_branch" != "$default_branch_name" ] && [ "x$current_branch" != "x" ]; then
         echo Currently on branch $current_branch
         git stash
-        git checkout master
+        git checkout $default_branch_name
     fi
 
     if [ "x$current_branch" != "x" ]; then
         git pull
-        echo "Checking for branches merged to master..."
+        echo "Checking for branches merged to $default_branch_name..."
         git branch --merged | \grep -v "\*" | xargs -n 1 git branch -d
     fi
 
