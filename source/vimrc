@@ -30,10 +30,11 @@ set autoindent
 set smartindent
 filetype plugin on
 filetype plugin indent on
-autocmd BufNewFile,BufRead *.p8   set syntax=lua
+autocmd BufNewFile,BufRead *.p8 set syntax=lua
 autocmd BufNewFile,BufRead *.vue set filetype=html
 autocmd BufNewFile,BufRead *.ad set filetype=asciidoc
 autocmd BufNewFile,BufRead *.zsh-theme set filetype=zsh
+autocmd BufNewFile,BufRead *.ad,*.adoc set colorcolumn=55,65,76
 set tags=.tags;/
 " }}}
 
@@ -134,9 +135,23 @@ augroup END
 
 " Status Bar {{{
 set laststatus=2
-set ruler
 set wildmenu
-set statusline+=%F
+
+"" Status line
+set statusline=
+set statusline+=%r%m " read-only status and modified status
+set statusline+=%y\ %F " file type and file name
+
+""" Right side
+set statusline+=%=
+set statusline+=Line\:\ 
+set statusline+=%3l\ " current line number
+set statusline+=/\ 
+set statusline+=%L\ " total lines
+set statusline+=%P\  " percentage of lines
+set statusline+=\|\ 
+set statusline+=Column\:\ 
+set statusline+=%-3c
 " }}}
 
 " Folding {{{
