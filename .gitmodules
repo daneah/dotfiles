@@ -7,3 +7,6 @@
 [submodule "source/vim/pack/user/start/vim-markdown"]
 	path = source/vim/pack/user/start/vim-markdown
 	url = git@github.com:plasticboy/vim-markdown.git
+[submodule "source/vim/pack/user/start/editorconfig-vim"]
+	path = source/vim/pack/user/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
