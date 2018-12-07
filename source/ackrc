@@ -2,6 +2,8 @@
 --ignore-dir=node_modules/
 --ignore-dir=.sass-cache/
 --ignore-dir=__pycache__/
+--ignore-dir=dist/
+--ignore-dir=build/
 --ignore-file=is:scss_lint.xml
 --ignore-dir=match:.egg-info/
 --color-match=bold red
