@@ -7,6 +7,19 @@ alias ct='update_ctags 2>&1 > /dev/null'
 alias myip='ipconfig getifaddr en1 || ipconfig getifaddr en0'
 alias dif='diff --side-by-side --suppress-common-lines'
 
+# shpotify
+alias sp='spotify'
+alias spp='spotify play'
+alias spa='spotify pause'
+alias spn='spotify next'
+alias spr='spotify prev'
+alias spq='spotify quit'
+alias sps='spotify stop'
+alias spv='spotify vol'
+alias spst='spotify status'
+alias spsh='spotify toggle shuffle'
+alias sprp='spotify toggle repeat'
+
 # nginx
 alias nst='sudo nginx'
 alias nrd='sudo nginx -s reload'

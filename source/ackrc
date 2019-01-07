@@ -2,6 +2,7 @@
 --ignore-dir=node_modules/
 --ignore-dir=.sass-cache/
 --ignore-dir=__pycache__/
+--ignore-dir=.pytest_cache/
 --ignore-dir=dist/
 --ignore-dir=build/
 --ignore-file=is:scss_lint.xml
