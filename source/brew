@@ -6,9 +6,9 @@ bat
 ccat
 git
 gpg
-helm
 httpie
 jq
+kubernetes-helm
 modd
 mysql
 node
