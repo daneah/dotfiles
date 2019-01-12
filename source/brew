@@ -6,12 +6,14 @@ bat
 ccat
 git
 gpg
+helm
 httpie
 jq
 modd
 mysql
 node
 pipenv
+proselint
 pyenv
 pyenv-virtualenv
 python
