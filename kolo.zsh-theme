@@ -32,7 +32,7 @@ function formatted_location_info(){
 function kubernetes_context(){
     if type "kubectl" > /dev/null; then
         local k8s_context=$(kubectl config current-context)
-        echo '%B%F{033} ☸︎' $k8s_context
+        echo '%B%F{033} ⎈' $k8s_context
     fi
 }
 
