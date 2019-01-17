@@ -10,3 +10,6 @@
 [submodule "source/vim/pack/user/start/editorconfig-vim"]
 	path = source/vim/pack/user/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "source/vim/pack/user/start/vim-surround"]
+	path = source/vim/pack/user/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
