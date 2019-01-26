@@ -1,11 +1,9 @@
 # odds and ends
 alias lfp='look_for_process'
-alias upfork='git fetch upstream; git checkout master; git merge upstream/master'
 alias updb='sudo /usr/libexec/locate.updatedb'
 alias chrome='open -a /Applications/Google\ Chrome.app'
 alias ct='update_ctags 2>&1 > /dev/null'
 alias myip='ipconfig getifaddr en1 || ipconfig getifaddr en0'
-alias dif='diff --side-by-side --suppress-common-lines'
 
 # shpotify
 alias sp='spotify'
@@ -20,12 +18,8 @@ alias spst='spotify status'
 alias spsh='spotify toggle shuffle'
 alias sprp='spotify toggle repeat'
 
-# nginx
-alias nst='sudo nginx'
-alias nrd='sudo nginx -s reload'
-alias nsp='sudo nginx -s stop'
-
 # git
+alias upfork='git fetch upstream; git checkout master; git merge upstream/master'
 alias gdi='git diff --ignore-all-space'
 alias gcb='git checkout -b'
 alias grp='git grep -n'
@@ -35,8 +29,8 @@ alias gmb='git merge-base $(current_branch) master'
 alias since='git log --oneline --decorate $(git merge-base --fork-point master)..HEAD'
 alias gdw='git diff --color-words'
 alias gst='git status -sb'
-alias goo='git oops'
-alias gun='git unstage'
+alias goop='git reset --soft HEAD~1'
+alias gun='git reset HEAD --'
 
 ##########
 # Python #
@@ -50,10 +44,6 @@ alias pil='pip list'
 alias pie='pip install -e'
 alias pup='pip install -U pip'
 alias psh='pipenv shell'
-
-# virtualenv(wrapper)
-alias wo='workon'
-alias de='deactivate'
 
 # Django
 alias run='./manage.py runserver'
@@ -81,3 +71,4 @@ alias svi='sudo vi'
 alias wget='wget -c'
 alias named='find . -name'
 alias vi=vim
+alias dif='diff --side-by-side --suppress-common-lines'
