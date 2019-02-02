@@ -1,3 +1,4 @@
 source/vim/undo/
-source/vim/colors
+source/vim/colors/
+source/vim/pack/kite/
 .netrwhist
