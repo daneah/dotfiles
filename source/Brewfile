@@ -1,0 +1,48 @@
+# Casks
+tap "caskroom/cask"
+
+# File watching
+brew "modd"
+brew "watch"
+
+# Databases
+brew "mysql", restart_service: true
+brew "sqlite"
+
+# Java
+brew "java"
+
+# JavaScript / JSON
+brew "jq"
+brew "node"
+
+# Python
+brew "pipenv"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "python"
+brew "python3"
+brew "readline"
+
+# Ruby
+brew "ruby"
+
+# Shell
+brew "zsh"
+
+# File editing
+brew "vim"
+
+# General CLI tools
+brew "ack"
+brew "asciinema"
+brew "bat"
+brew "ccat"
+brew "git"
+brew "gnupg"
+brew "httpie"
+brew "kubernetes-helm"
+brew "proselint"
+brew "tree"
+brew "wget"
+brew "xz"
