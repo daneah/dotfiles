@@ -64,7 +64,7 @@ set hlsearch
 set ignorecase
 set smartcase
 nnoremap <space> /
-nnoremap <Leader><space> :nohlsearch<CR>
+nnoremap <Leader><space> :set hlsearch!<CR>
 " }}}
 
 " Tabs {{{
