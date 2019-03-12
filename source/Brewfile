@@ -9,12 +9,8 @@ brew "watch"
 brew "mysql", restart_service: true
 brew "sqlite"
 
-# Java
-brew "java"
-
 # JavaScript / JSON
 brew "jq"
-brew "node"
 
 # Python
 brew "pipenv"
