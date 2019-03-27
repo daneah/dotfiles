@@ -28,7 +28,6 @@ plugins=( \
     redis-cli \
     rvm \
     screen \
-    spotify \
     supervisor \
     z \
     zsh-syntax-highlighting \
