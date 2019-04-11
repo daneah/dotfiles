@@ -47,6 +47,17 @@ main() {
     mkdir -p $themes_dir
     ln -sf $theme_template $theme_file
     ln -sf $invoke_completion $custom_dir/$INVOKE_COMPLETION
+
+    if [ -x "$(command -v bat)" ]; then
+        readonly local themes_dir=$(bat --config-dir)/themes
+        readonly local bat_theme_name="Solarized (dark)"
+        readonly local bat_theme="$bat_theme_name.tmTheme"
+        mkdir -p $themes_dir
+        local bat_theme_full_path="$(cd "$(dirname "$bat_theme")" && pwd)/$(basename "$bat_theme")"
+        ln -sf $bat_theme_full_path $themes_dir/$bat_theme
+        echo --theme="\"$bat_theme_name\"" > $(bat --config-file)
+        bat cache --build
+    fi
 }
 
 main
