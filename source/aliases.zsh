@@ -4,7 +4,10 @@ alias updb='sudo /usr/libexec/locate.updatedb'
 alias chrome='open -a /Applications/Google\ Chrome.app'
 alias ct='update_ctags 2>&1 > /dev/null'
 alias myip='ipconfig getifaddr en1 || ipconfig getifaddr en0'
-alias cat='bat -p'
+
+if [ -x "$(command -v bat)" ]; then
+    alias cat='bat -p'
+fi
 
 # shpotify
 alias sp='spotify'
