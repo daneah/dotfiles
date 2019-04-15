@@ -42,3 +42,6 @@ brew "proselint"
 brew "tree"
 brew "wget"
 brew "xz"
+
+# Security
+cask "keepassxc"
