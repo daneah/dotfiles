@@ -56,6 +56,7 @@ main() {
         local bat_theme_full_path="$(cd "$(dirname "$bat_theme")" && pwd)/$(basename "$bat_theme")"
         ln -sf $bat_theme_full_path $themes_dir/$bat_theme
         echo --theme="\"$bat_theme_name\"" > $(bat --config-file)
+        echo "--paging=never" >> $(bat --config-file)
         bat cache --build
     fi
 }
