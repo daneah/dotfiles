@@ -172,4 +172,8 @@ nnoremap <Leader>U yypv$r━
 set modelines=1
 " }}}
 
+" CtrlP {{{
+let g:ctrlp_map = '<leader>f'
+" }}}
+
 " vim:foldmethod=marker:foldlevel=0

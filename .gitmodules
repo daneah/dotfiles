@@ -13,3 +13,6 @@
 [submodule "source/vim/pack/user/start/vim-surround"]
 	path = source/vim/pack/user/start/vim-surround
 	url = git@github.com:tpope/vim-surround.git
+[submodule "source/vim/pack/user/start/ctrlp.vim"]
+	path = source/vim/pack/user/start/ctrlp.vim
+	url = git@github.com:kien/ctrlp.vim.git
