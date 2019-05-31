@@ -16,3 +16,6 @@
 [submodule "source/vim/pack/user/start/ctrlp.vim"]
 	path = source/vim/pack/user/start/ctrlp.vim
 	url = git@github.com:kien/ctrlp.vim.git
+[submodule "source/vim/pack/user/start/requirements.txt.vim"]
+	path = source/vim/pack/user/start/requirements.txt.vim
+	url = git@github.com:raimon49/requirements.txt.vim
