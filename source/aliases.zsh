@@ -2,6 +2,7 @@
 alias lfp='look_for_process'
 alias updb='sudo /usr/libexec/locate.updatedb'
 alias chrome='open -a /Applications/Google\ Chrome.app'
+alias ff='open -a /Applications/Firefox\ Developer\ Edition.app'
 alias ct='update_ctags 2>&1 > /dev/null'
 alias myip='ipconfig getifaddr en1 || ipconfig getifaddr en0'
 
