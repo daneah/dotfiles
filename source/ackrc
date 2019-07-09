@@ -1,8 +1,10 @@
+--smart-case
 --ignore-dir=.idea/
 --ignore-dir=node_modules/
 --ignore-dir=.sass-cache/
 --ignore-dir=__pycache__/
 --ignore-dir=.pytest_cache/
+--ignore-dir=.mypy_cache/
 --ignore-dir=dist/
 --ignore-dir=build/
 --ignore-dir=coverage/
