@@ -78,6 +78,3 @@ export GPG_TTY=$(tty)
 
 # poetry
 export PATH="${HOME}/.poetry/bin:${PATH}"
-
-# conda
-export PATH="$HOME/miniconda3/bin:$PATH"
