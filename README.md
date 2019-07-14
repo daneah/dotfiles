@@ -12,18 +12,26 @@ $ ./install.zsh
 
 ## Configuration Files
 
+### `Brewfile`
+
+A list of things to be installed using Homebrew
+
 ### `ackrc`
 
 Configuration for `ack`.
 Ignores several common generated output directory patterns.
 
+### `alexrc`
+
+Configuration for [`alex`](https://github.com/get-alex/alex), the considerate writing tool.
+
 ### `aliases.zsh`
 
 Command aliases that work in `zsh` but may not be safe for other shells.
 
-### `brew`
+### `ctags`
 
-A list of things to be installed using Homebrew
+Configuration for the `ctags` indexing tool.
 
 ### `functions.zsh`
 
@@ -44,7 +52,7 @@ Configuration for `npm`, namely the directory for global installations.
 
 ### `pystartup`
 
-Configuration for Python startup, namely to enable readline capabilities from previous sessions.
+Configuration for Python startup, namely to enable readline capabilities from previous sessions along with tab completion.
 
 ### `rvmrc`
 
@@ -56,7 +64,7 @@ Configuration for `screen` status line
 
 ### `vimrc`
 
-Configuration to improve the user experience of `VIM`. No fancy macros, just good highlighting and native settings along with some position history.
+Configuration to improve the user experience of Vim. No fancy macros, just good highlighting and native settings along with some position history.
 
 ### `zshrc`
 
