@@ -14,8 +14,8 @@ $ ./install.zsh
 
 | File            | Purpose                                                                                                                                                                       |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Brewfile`      | A list of things to be installed using Homebrew                                                                                                                               |
-| `ackrc`         | Configuration for `ack`. Ignores several common generated output directory patterns.                                                                                          |
+| `Brewfile`      | A list of things to be installed using [Homebrew](https://brew.sh/)                                                                                                           |
+| `ackrc`         | Configuration for [`ack`](https://linux.die.net/man/1/ack). Ignores several common generated output directory patterns.                                                       |
 | `alexrc`        | Configuration for [`alex`](https://github.com/get-alex/alex), the considerate writing tool.                                                                                   |
 | `aliases.zsh`   | Command aliases that work in `zsh` but may not be safe for other shells.                                                                                                      |
 | `ctags`         | Configuration for the `ctags` indexing tool.                                                                                                                                  |
@@ -24,7 +24,7 @@ $ ./install.zsh
 | `hushlogin`     | Tells macOS not to include Last Login messages on shell startup.                                                                                                              |
 | `npmrc`         | Configuration for `npm`, namely the directory for global installations.                                                                                                       |
 | `pystartup`     | Configuration for Python startup, namely to enable readline capabilities from previous sessions along with tab completion.                                                    |
-| `rvmrc`         | Configuration for RVM, namely to set autoupdating                                                                                                                             |
-| `screenrc`      | Configuration for `screen` status line                                                                                                                                        |
-| `vimrc`         | Configuration to improve the user experience of Vim. No fancy macros, just good highlighting and native settings along with some position history.                            |
-| `zshrc`         | Configuration, aliases, functions, and settings for making `zsh` even more awesome.                                                                                           |
+| `rvmrc`         | Configuration for [RVM](https://rvm.io/), namely to set autoupdating                                                                                                          |
+| `screenrc`      | Configuration for [`screen`](https://www.gnu.org/software/screen/) status line                                                                                                |
+| `vimrc`         | Configuration to improve the user experience of [Vim](https://www.vim.org/). No fancy macros, just good highlighting and native settings along with some position history.    |
+| `zshrc`         | Configuration settings for making `zsh` even more awesome.                                                                                                                    |
