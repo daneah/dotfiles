@@ -43,13 +43,11 @@ function aws_vault_info(){
 }
 
 function virtualenv_info(){
-    local -r current_env=pyenv_prompt_info
+    local -r current_env=$(pyenv_prompt_info)
     if [ $current_env ]; then
-        if [ $VIRTUAL_ENV ]; then
-            echo '%B%F{white}('$(basename $VIRTUAL_ENV)') '
-        else
-            echo '%B%F{white}('$($current_env)') '
-        fi
+        echo '%B%F{white}('$current_env') '
+    else
+        echo '%B%F{white}('$(basename $VIRTUAL_ENV)') '
     fi
 }
 
