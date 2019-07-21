@@ -46,6 +46,7 @@ set undodir=~/.vim/undo
 " Text Width {{{
 set nowrap
 set colorcolumn=120
+nmap <Leader>w :setlocal wrap!<CR>
 " }}}
 
 " Paste Formatting {{{
