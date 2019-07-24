@@ -49,6 +49,10 @@ alias pil='pip list'
 alias pie='pip install -e'
 alias pup='pip install -U pip'
 alias psh='pipenv shell'
+alias pnv='pyenv virtualenv'
+alias pvs='pyenv versions'
+alias pin='pyenv install'
+alias pun='pyenv uninstall'
 
 # Django
 alias run='./manage.py runserver'
