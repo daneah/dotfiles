@@ -19,3 +19,6 @@
 [submodule "source/vim/pack/user/start/requirements.txt.vim"]
 	path = source/vim/pack/user/start/requirements.txt.vim
 	url = git@github.com:raimon49/requirements.txt.vim
+[submodule "source/vim/pack/user/start/semantic-highlight.vim"]
+	path = source/vim/pack/user/start/semantic-highlight.vim
+	url = git@github.com:jaxbot/semantic-highlight.vim.git

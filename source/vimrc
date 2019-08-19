@@ -23,6 +23,7 @@ set t_Co=256
 colorscheme solarized
 set background=dark
 syntax on
+nnoremap <Leader>s :SemanticHighlightToggle<cr>
 " }}}
 
 " File Handling {{{
