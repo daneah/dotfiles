@@ -6,7 +6,6 @@ brew "modd"
 brew "watch"
 
 # Databases
-brew "mysql", restart_service: true
 brew "sqlite"
 
 # JavaScript / JSON

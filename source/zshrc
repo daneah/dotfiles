@@ -65,7 +65,6 @@ export PATH="${HOME}/.rvm/bin:${PATH}" # Add RVM to PATH for scripting
 ssh-add -A &>/dev/null
 
 export PYENV_ROOT="${HOME}/.pyenv"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # added by travis gem
 [ -f ${HOME}/.travis/travis.sh ] && source ${HOME}/.travis/travis.sh
