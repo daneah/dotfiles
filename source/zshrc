@@ -20,7 +20,7 @@ plugins=( \
     httpie \
     jira \
     kubectl \
-    npm \
+    nvm \
     osx \
     pip \
     poetry \
@@ -58,7 +58,6 @@ export PYTHONSTARTUP=$HOME/.pystartup
 export PYTHONDONTWRITEBYTECODE=1
 
 export EDITOR=vim
-export PATH="${HOME}/.npm-packages/bin:${PATH}" # Add npm to PATH
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="${HOME}/.rvm/bin:${PATH}" # Add RVM to PATH for scripting
 
