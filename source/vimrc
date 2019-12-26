@@ -12,12 +12,6 @@ let mapleader=","
 nmap ; :
 " }}}
 
-" Mouse {{{
-if has('mouse')
-    set mouse=a
-endif
-" }}}
-
 " Colors {{{
 set t_Co=256
 colorscheme solarized
@@ -33,6 +27,7 @@ filetype plugin on
 filetype plugin indent on
 autocmd BufNewFile,BufRead *.p8 set syntax=lua
 autocmd BufNewFile,BufRead *.vue set filetype=html
+autocmd BufNewFile,BufRead *.mdx set filetype=javascript
 autocmd BufNewFile,BufRead *.ad set filetype=asciidoc
 autocmd BufNewFile,BufRead *.zsh-theme set filetype=zsh
 autocmd BufNewFile,BufRead *.ad,*.adoc set colorcolumn=55,65,76

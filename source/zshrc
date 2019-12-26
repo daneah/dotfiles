@@ -76,3 +76,9 @@ export GPG_TTY=$(tty)
 
 # poetry
 export PATH="${HOME}/.poetry/bin:${PATH}"
+
+# MySQL
+export PATH="/usr/local/opt/mysql@5.7/bin:${PATH}"
+
+# direnv
+eval "$(direnv hook zsh)"
