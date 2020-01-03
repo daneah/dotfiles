@@ -8,6 +8,7 @@ ENABLE_CORRECTION="true"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 
 DISABLE_UPDATE_PROMPT=true
+export ITERM2_SQUELCH_MARK=1
 
 plugins=( \
     brew \
