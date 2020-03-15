@@ -41,17 +41,6 @@ upr() {
     cd - > /dev/null 2>&1
 }
 
-up() {
-    local orig_dir=`pwd`
-    cd $REPOS_HOME > /dev/null 2>&1;
-    echo '\nUpdating repositories'
-    echo '====================='
-    for repo in `ls`; do
-        upr $repo
-    done
-    cd $orig_dir > /dev/null 2>&1
-}
-
 guni() {
     local current_dir=`basename $(pwd)`
     if [ -d $current_dir ]; then
