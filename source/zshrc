@@ -85,3 +85,7 @@ export PATH="/usr/local/opt/mysql@5.7/bin:${PATH}"
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# Link against Homebrew versions of libraries
+export CFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix zlib)/include -I$(brew --prefix sqlite)/include"
+export LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix sqlite)/lib"
