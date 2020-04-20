@@ -89,3 +89,7 @@ eval "$(direnv hook zsh)"
 # Link against Homebrew versions of libraries
 export CFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix zlib)/include -I$(brew --prefix sqlite)/include"
 export LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix sqlite)/lib"
+
+# locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
