@@ -81,3 +81,4 @@ alias wget='wget -c'
 alias named='find . -name'
 alias vi=vim
 alias dif='diff --side-by-side --suppress-common-lines'
+alias ack='ag'
