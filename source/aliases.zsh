@@ -82,3 +82,4 @@ alias named='find . -name'
 alias vi=vim
 alias dif='diff --side-by-side --suppress-common-lines'
 alias ack='ag --color-match="1;31;100"'
+alias ag='ag --color-match="1;31;100"'
