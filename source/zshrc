@@ -80,11 +80,9 @@ export PATH="/usr/local/opt/mysql@5.7/bin:${PATH}"
 eval "$(direnv hook zsh)"
 
 # Link against Homebrew versions of libraries
-local -r ZLIB=$(brew --prefix zlib)
-local -r OPENSSL=$(brew --prefix zlib)
-local -r SQLITE=$(brew --prefix zlib)
-export CFLAGS="-I$OPENSSL/include -I$ZLIB/include -I$SQLITE/include"
-export LDFLAGS="-L$OPENSSL/lib -L$ZLIB/lib -L$SQLITE/lib"
+local -r LINK_PREFIX="/usr/local/opt"
+export CFLAGS="-I$LINK_PREFIX/openssl@1.1/include -I$LINK_PREFIX/zlib/include -I$LINK_PREFIX/sqlite/include"
+export LDFLAGS="-L$LINK_PREFIX/openssl@1.1/lib -L$LINK_PREFIX/zlib/lib -L$LINK_PREFIX/sqlite/lib"
 
 # locale
 export LC_ALL=en_US.UTF-8
