@@ -55,3 +55,6 @@ brew "zlib"
 
 # Security
 cask "keepassxc"
+
+# Productivity
+cask "alfred"
