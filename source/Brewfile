@@ -1,6 +1,3 @@
-# Casks
-tap "caskroom/cask"
-
 # File watching
 brew "modd"
 brew "watch"
