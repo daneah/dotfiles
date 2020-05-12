@@ -87,6 +87,7 @@ nmap <Right> <nop>
 set sidescroll=1
 set sidescrolloff=30
 set scrolloff=3
+set lazyredraw
 " }}}
 
 " Movement {{{
