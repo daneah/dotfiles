@@ -8,6 +8,7 @@ ZSH_THEME="kolo"
 ENABLE_CORRECTION="true"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777777"
 
 DISABLE_UPDATE_PROMPT=true
 export ITERM2_SQUELCH_MARK=1
@@ -35,6 +36,7 @@ plugins=( \
     ssh-agent \
     supervisor \
     z \
+    zsh-autosuggestions \
     zsh-syntax-highlighting \
     history-substring-search \
 )
