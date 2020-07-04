@@ -24,29 +24,34 @@ brew "zsh"
 # File editing
 brew "vim"
 
+# Git[Hub]
+brew "gh"
+brew "git"
+brew "pre-commit"
+
+# Networking
+brew "curl"
+brew "httpie"
+cask "ngrok"
+brew "wget"
+
 # General CLI tools
 brew "asciinema"
 brew "awscli"
 brew "bat"
 brew "cookiecutter"
 brew "ctags"
-brew "curl"
 brew "direnv"
-brew "git"
 brew "gnupg"
 brew "graphviz"
 brew "helm"
-brew "httpie"
 brew "htop"
 brew "modd"
-cask "ngrok"
-brew "pre-commit"
 brew "proselint"
 brew "ripgrep"
 brew "tox"
 brew "tree"
 brew "watch"
-brew "wget"
 brew "xz"
 brew "zlib"
 
