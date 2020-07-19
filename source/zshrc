@@ -18,6 +18,7 @@ plugins=( \
     bundler \
     django \
     docker \
+    docker-compose \
     gem \
     git \
     history \
@@ -88,3 +89,5 @@ export LDFLAGS="-L$LINK_PREFIX/openssl@1.1/lib -L$LINK_PREFIX/zlib/lib -L$LINK_P
 # locale
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
