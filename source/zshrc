@@ -13,6 +13,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#555555"
 DISABLE_UPDATE_PROMPT=true
 export ITERM2_SQUELCH_MARK=1
 
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
+
 plugins=( \
     brew \
     bundler \
@@ -36,7 +38,6 @@ plugins=( \
     screen \
     ssh-agent \
     supervisor \
-    z \
     zsh-autosuggestions \
     zsh-syntax-highlighting \
     history-substring-search \
@@ -91,3 +92,11 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
+
+# added by travis gem
+[ ! -s /Users/dhillard/.travis/travis.sh ] || source /Users/dhillard/.travis/travis.sh
+
+# zoxide
+if type "zoxide" 2>&1 > /dev/null; then
+    eval "$(zoxide init zsh)"
+fi

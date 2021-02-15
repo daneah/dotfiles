@@ -54,7 +54,9 @@ brew "tox"
 brew "tree"
 brew "watch"
 brew "xz"
+brew "yq"
 brew "zlib"
+brew "zoxide"
 
 # Security
 cask "keepassxc"
