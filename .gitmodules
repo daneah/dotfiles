@@ -22,3 +22,6 @@
 [submodule "source/vim/pack/user/start/semantic-highlight.vim"]
 	path = source/vim/pack/user/start/semantic-highlight.vim
 	url = git@github.com:jaxbot/semantic-highlight.vim.git
+[submodule "source/vim/pack/user/start/vcl-vim-plugin"]
+	path = source/vim/pack/user/start/vcl-vim-plugin
+	url = git@github.com:smerrill/vcl-vim-plugin.git
