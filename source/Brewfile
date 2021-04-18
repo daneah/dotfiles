@@ -9,6 +9,7 @@ brew "sqlite"
 brew "jq"
 
 # Python
+brew "poetry"
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "python"
