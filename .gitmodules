@@ -25,3 +25,6 @@
 [submodule "source/vim/pack/user/start/vcl-vim-plugin"]
 	path = source/vim/pack/user/start/vcl-vim-plugin
 	url = git@github.com:smerrill/vcl-vim-plugin.git
+[submodule "source/vim/pack/user/start/vim-toml"]
+	path = source/vim/pack/user/start/vim-toml
+	url = git@github.com:cespare/vim-toml.git
