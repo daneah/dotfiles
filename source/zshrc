@@ -31,7 +31,6 @@ plugins=( \
     osx \
     pip \
     poetry \
-    pyenv \
     python \
     redis-cli \
     rvm \
@@ -56,17 +55,11 @@ if [ -f $HOME/.functions.zsh ]; then
     . $HOME/.functions.zsh
 fi
 
-if [ -f $HOME/.profile ]; then
-    . $HOME/.profile
-fi
-
 export PYTHONSTARTUP=$HOME/.pystartup
 export PYTHONDONTWRITEBYTECODE=1
 
 export EDITOR=vim
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-export PYENV_ROOT="${HOME}/.pyenv"
 
 # added by travis gem
 [ -f ${HOME}/.travis/travis.sh ] && source ${HOME}/.travis/travis.sh
@@ -100,3 +93,6 @@ export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
 if type "zoxide" 2>&1 > /dev/null; then
     eval "$(zoxide init zsh)"
 fi
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
