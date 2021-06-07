@@ -16,6 +16,7 @@ export ITERM2_SQUELCH_MARK=1
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 plugins=( \
+    asdf \
     brew \
     bundler \
     django \
@@ -94,5 +95,4 @@ if type "zoxide" 2>&1 > /dev/null; then
     eval "$(zoxide init zsh)"
 fi
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+export PATH="$PATH:$HOME/.local/bin"

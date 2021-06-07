@@ -19,7 +19,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 setopt prompt_subst
 PROMPT='
-%{$(iterm2_prompt_mark)%}$(env_info)$(aws_vault_info)$(virtualenv_info)$(formatted_location_info)%B%F{red}$(gemset_info)$(kubernetes_context)%B%F{green}${vcs_info_msg_0_}%{$reset_color%}
+%{$(iterm2_prompt_mark)%}$(env_info)$(aws_vault_info)$(python_info)$(formatted_location_info)%B%F{red}$(gemset_info)$(kubernetes_context)%B%F{green}${vcs_info_msg_0_}%{$reset_color%}
 %(?..%B%F{red})%(2L.%L.)%(!.#.$)%{$reset_color%} '
 
 autoload -U add-zsh-hook
@@ -42,8 +42,9 @@ function aws_vault_info(){
     fi
 }
 
-function virtualenv_info(){
-    local -r current_env=$(pyenv version-name)
+function python_info(){
+    type py &> /dev/null && local -r current_env=$(py -V) || local -r current_env=""
+
     if [ $current_env ]; then
         echo '%B%F{white}('$current_env') '
     elif [ $VIRTUAL_ENV ]; then
