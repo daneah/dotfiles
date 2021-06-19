@@ -31,7 +31,6 @@ plugins=( \
     osx \
     pip \
     poetry \
-    python \
     redis-cli \
     screen \
     ssh-agent \

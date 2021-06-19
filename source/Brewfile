@@ -9,15 +9,9 @@ brew "sqlite"
 brew "jq"
 
 # Python
-brew "poetry"
-brew "pyenv"
-brew "pyenv-virtualenv"
 brew "python"
 brew "python3"
 brew "readline"
-
-# Ruby
-brew "ruby"
 
 # Shell
 brew "zsh"
@@ -51,7 +45,6 @@ brew "htop"
 brew "modd"
 brew "proselint"
 brew "ripgrep"
-brew "tox"
 brew "tree"
 brew "watch"
 brew "xz"
