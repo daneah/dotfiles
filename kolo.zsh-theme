@@ -70,7 +70,7 @@ function ruby_info(){
     if [ $current_env ]; then
         echo '%B%F{red}('$current_env') '
     else
-        echo '%B%F{red}(UNKNOWN)'
+        echo '%B%F{red}(UNKNOWN) '
     fi
 }
 
