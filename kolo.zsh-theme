@@ -19,7 +19,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 setopt prompt_subst
 PROMPT='
-%{$(iterm2_prompt_mark)%}$(env_info)$(aws_vault_info)$(python_info)$(formatted_location_info)%B%F{red}$(gemset_info)$(kubernetes_context)%B%F{green}${vcs_info_msg_0_}%{$reset_color%}
+%{$(iterm2_prompt_mark)%}$(env_info)$(aws_vault_info)$(python_info)$(node_info)$(formatted_location_info)$(kubernetes_context)%B%F{green}${vcs_info_msg_0_}%{$reset_color%}
 %(?..%B%F{red})%(2L.%L.)%(!.#.$)%{$reset_color%} '
 
 autoload -U add-zsh-hook
@@ -54,11 +54,13 @@ function python_info(){
     fi
 }
 
-function gemset_info(){
-    local gemset=$(rvm-prompt g 2&> /dev/null)
-    if [ -n "$gemset" ]; then
-        gemset=${gemset#"@"}
-        echo " ♦ $gemset"
+function node_info(){
+    type node &> /dev/null && local -r current_env=$(node -v) || local -r current_env=""
+
+    if [ $current_env ]; then
+        echo '%B%F{green}('$current_env') '
+    else
+        echo '%B%F{green}(UNKNOWN) '
     fi
 }
 

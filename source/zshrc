@@ -28,13 +28,11 @@ plugins=( \
     httpie \
     jira \
     kubectl \
-    nvm \
     osx \
     pip \
     poetry \
     python \
     redis-cli \
-    rvm \
     screen \
     ssh-agent \
     supervisor \
