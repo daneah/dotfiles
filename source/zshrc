@@ -3,15 +3,12 @@ export HOMEBREW_NO_ANALYTICS=1
 export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh-custom
 
-ZSH_THEME="kolo"
-
 ENABLE_CORRECTION="true"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=242"
 
 DISABLE_UPDATE_PROMPT=true
-export ITERM2_SQUELCH_MARK=1
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
@@ -93,3 +90,8 @@ if type "zoxide" 2>&1 > /dev/null; then
 fi
 
 export PATH="$PATH:$HOME/.local/bin"
+
+export STARSHIP_CONFIG="$HOME/.starship.toml"
+if type "starship" 2>&1 > /dev/null; then
+    eval "$(starship init zsh)"
+fi

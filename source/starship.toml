@@ -1,0 +1,52 @@
+format = """$shlvl$env_var in $directory$git_branch$git_status$python$nodejs$ruby$kubernetes$aws
+$status$character"""
+
+[aws]
+symbol = "🅰 "
+
+[character]
+success_symbol = "[\\$](bold green)"
+error_symbol = "[\\$](bold red)"
+
+[cmd_duration]
+disabled = true
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+style = "bold purple"
+
+[env_var]
+variable = "SGK_ENVIRONMENT"
+style = "bold white"
+format = "[\\($env_value\\)]($style)"
+
+[git_branch]
+symbol = ""
+style = "bold green"
+format = "[\\[$branch\\]]($style) "
+
+[kubernetes]
+disabled = false
+style = "bold blue"
+format = '[$symbol$context( \($namespace\))]($style) '
+
+[nodejs]
+symbol = "⬢ "
+
+[python]
+python_binary = "py"
+detect_folders = [".venv"]
+
+[ruby]
+symbol = "⬙ "
+detect_folders = [".bundle/ruby"]
+
+[shlvl]
+disabled = false
+symbol = "↳ "
+
+[status]
+format = '[\[$symbol $common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
+disabled = false
