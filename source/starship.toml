@@ -1,5 +1,5 @@
 format = """$shlvl$env_var in $directory$git_branch$git_status$python$nodejs$ruby$kubernetes$aws
-$character"""
+$status$character"""
 
 [aws]
 symbol = "🅰 "
