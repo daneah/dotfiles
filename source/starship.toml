@@ -27,6 +27,7 @@ style = "bold green"
 format = "[\\[$branch\\]]($style) "
 
 [kubernetes]
+symbol = "☸︎ "
 disabled = false
 style = "bold blue"
 format = '[$symbol$context( \($namespace\))]($style) '
