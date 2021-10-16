@@ -30,6 +30,9 @@ brew "httpie"
 cask "ngrok"
 brew "wget"
 
+# Build tools
+brew "cmake"
+
 # General CLI tools
 brew "asciinema"
 brew "awscli"

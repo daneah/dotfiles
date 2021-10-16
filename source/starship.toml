@@ -17,6 +17,7 @@ truncate_to_repo = false
 style = "bold purple"
 
 [env_var]
+default = ""
 variable = "SGK_ENVIRONMENT"
 style = "bold white"
 format = "[\\($env_value\\)]($style)"
