@@ -48,6 +48,7 @@
 
 [pull]
     rebase = false
+
 [user]
-	name = Dane Hillard
-	email = github@danehillard.com
+    name = Dane Hillard
+    email = github@danehillard.com

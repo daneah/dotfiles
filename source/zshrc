@@ -89,3 +89,9 @@ export STARSHIP_CONFIG="$HOME/.starship.toml"
 if type "starship" 2>&1 > /dev/null; then
     eval "$(starship init zsh)"
 fi
+
+if [ -f $HOME/.asdf/asdf.sh ]; then
+    . $HOME/.asdf/asdf.sh
+    fpath=(${ASDF_DIR}/completions $fpath)
+    autoload -Uz compinit && compinit
+fi
