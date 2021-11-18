@@ -16,6 +16,8 @@ main() {
     readonly local src_dir=source
     readonly local custom_dir=${HOME}/.zsh-custom
 
+    mkdir -p $HOME/.vim/undo
+
     pushd_quiet $project_dir
 
     if [ $? -eq 0 ]; then
