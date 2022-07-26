@@ -2,3 +2,6 @@
 
 --type-add
 mdx:*.mdx
+
+--type-add
+vue:*.vue
