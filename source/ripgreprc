@@ -5,3 +5,6 @@ mdx:*.mdx
 
 --type-add
 vue:*.vue
+
+--type-add
+adoc:*.adoc
