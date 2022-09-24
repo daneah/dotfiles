@@ -38,7 +38,7 @@ set tags=.tags;/
 
 " Undo {{{
 set undofile
-set undodir=~/.vim/undo
+set undodir=~/.vim/undo//
 " }}}
 
 " Text Width {{{
@@ -115,8 +115,9 @@ match ErrorMsg '\s\+$'
 " }}}
 
 " Temporary Files {{{
-set nobackup
-set noswapfile
+set backupcopy=yes
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
 " }}}
 
 " Line Recall {{{
