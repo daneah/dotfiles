@@ -36,6 +36,10 @@ autocmd BufNewFile,BufRead *.ad,*.adoc set colorcolumn=55,65,76
 set tags=.tags;/
 " }}}
 
+" Cursor {{{
+set cursorline
+" }}}
+
 " Undo {{{
 set undofile
 set undodir=~/.vim/undo//
@@ -62,6 +66,7 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+set shortmess-=S
 nnoremap <space> /
 nnoremap <Leader><space> :set hlsearch!<CR>
 " }}}
