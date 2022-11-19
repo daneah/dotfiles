@@ -52,3 +52,5 @@
 [user]
     name = Dane Hillard
     email = github@danehillard.com
+[init]
+	defaultBranch = main
