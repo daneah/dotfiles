@@ -68,7 +68,7 @@ export PATH="/usr/local/opt/mysql@5.7/bin:${PATH}"
 eval "$(direnv hook zsh)"
 
 # Link against Homebrew versions of libraries
-local -r LINK_PREFIX="/usr/local/opt"
+local -r LINK_PREFIX="/opt/homebrew/opt"
 export CFLAGS="-I$LINK_PREFIX/openssl@1.1/include -I$LINK_PREFIX/zlib/include -I$LINK_PREFIX/sqlite/include -I$LINK_PREFIX/libffi/include"
 export LDFLAGS="-L$LINK_PREFIX/openssl@1.1/lib -L$LINK_PREFIX/zlib/lib -L$LINK_PREFIX/sqlite/lib -L$LINK_PREFIX/libffi/lib"
 export PKG_CONFIG_PATH="$LINK_PREFIX/libffi/lib/pkgconfig"
