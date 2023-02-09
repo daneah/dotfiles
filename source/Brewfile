@@ -32,9 +32,10 @@ cask "ngrok"
 brew "wget"
 
 # Build tools
-brew "cmake"
+cask "cmake"
 
 # General CLI tools
+brew "adr-tools"
 brew "asciinema"
 brew "awscli"
 brew "bat"
@@ -44,7 +45,6 @@ brew "devd"
 brew "direnv"
 brew "fzf"
 brew "gnupg"
-brew "graphviz"
 brew "helm"
 brew "htop"
 brew "proselint"
@@ -52,8 +52,27 @@ brew "ripgrep"
 brew "tree"
 brew "xz"
 brew "yq"
-brew "zlib"
 brew "zoxide"
+brew "zstd"
+
+# Caches
+brew "redis"
+
+# Compression
+brew "brotli"
+brew "zlib"
+
+# Image and text libraries
+brew "cairo"
+brew "graphviz"
+brew "jpeg-turbo"
+brew "jpeg-xl"
+brew "libpng"
+brew "pango"
+brew "webp"
+
+# Libraries
+brew "libxml2"
 
 # Security
 cask "keepassxc"
