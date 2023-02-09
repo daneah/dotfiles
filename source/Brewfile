@@ -1,5 +1,4 @@
 # File watching
-brew "modd"
 brew "watch"
 
 # Databases
