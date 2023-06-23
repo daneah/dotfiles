@@ -1,0 +1,16 @@
+black
+pyproject-build
+flake8
+llm
+mypy
+pip-tools
+pipx
+pre-commit
+pyupgrade
+radon
+shot-scraper
+sphinx
+strip-tags
+tox
+ttok
+twine
