@@ -42,12 +42,12 @@ alias gun='git reset HEAD --'
 ##########
 
 # pip
-alias upip='pip freeze --local | \grep -v "^\-e" | cut -d = -f 1  | xargs -n1 pip install -U'
-alias pir='pip install -r '
-alias prq='pip install -r requirements.txt'
-alias pil='pip list'
-alias pie='pip install -e'
-alias pup='pip install -U pip'
+alias upip='py -m pip freeze --local | \grep -v "^\-e" | cut -d = -f 1  | xargs -n1 py -m pip install -U'
+alias pir='py -m pip install -r '
+alias prq='py -m pip install -r requirements.txt'
+alias pil='py -m pip list'
+alias pie='py -m pip install -e'
+alias pup='py -m pip install -U pip setuptools wheel'
 alias psh='pipenv shell'
 
 # Django
