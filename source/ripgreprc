@@ -8,3 +8,9 @@ vue:*.vue
 
 --type-add
 adoc:*.adoc
+
+--type-add
+django:*.{html,py}
+
+--type-add
+web:*.{html,css,js,jsx,ts,tsx}
