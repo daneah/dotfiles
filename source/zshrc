@@ -1,8 +1,23 @@
+# Profiling; uncomment next line and last line
+# zmodload zsh/zprof
+
+# locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+autoload zmv
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
+
+export PATH="$PATH:$HOME/.local/bin"
+
 export HOMEBREW_NO_ANALYTICS=1
 
 export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh-custom
-autoload zmv
 
 ENABLE_CORRECTION="true"
 
@@ -11,36 +26,33 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=242"
 
 DISABLE_UPDATE_PROMPT=true
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
+# Starship
+export STARSHIP_CONFIG="$HOME/.starship.toml"
 
 plugins=( \
     asdf \
     brew \
-    bundler \
+    direnv \
     docker \
     docker-compose \
-    gem \
     git \
     history \
+    history-substring-search \
     httpie \
-    jira \
     kubectl \
     macos \
-    pip \
-    poetry \
     redis-cli \
     screen \
     ssh-agent \
-    supervisor \
+    starship \
+    zoxide \
     zsh-autosuggestions \
     zsh-syntax-highlighting \
-    history-substring-search \
 )
 
 source $ZSH/oh-my-zsh.sh
 
-setopt hist_ignore_all_dups
-setopt hist_reduce_blanks
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 if [ -f $HOME/.aliases.zsh ]; then
     . $HOME/.aliases.zsh
@@ -50,22 +62,21 @@ if [ -f $HOME/.functions.zsh ]; then
     . $HOME/.functions.zsh
 fi
 
+# Python
 export PYTHONSTARTUP=$HOME/.pystartup
 export PYTHONDONTWRITEBYTECODE=1
 
+# vim
 export EDITOR=vim
+
+# iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# GPG
 export GPG_TTY=$(tty)
-
-# poetry
-export PATH="${HOME}/.poetry/bin:${PATH}"
 
 # MySQL
 export PATH="/usr/local/opt/mysql@5.7/bin:${PATH}"
-
-# direnv
-eval "$(direnv hook zsh)"
 
 # Link against Homebrew versions of libraries
 local -r LINK_PREFIX="/opt/homebrew/opt"
@@ -73,26 +84,11 @@ export CFLAGS="-I$LINK_PREFIX/openssl@3/include -I$LINK_PREFIX/zlib/include -I$L
 export LDFLAGS="-L$LINK_PREFIX/openssl@3/lib -L$LINK_PREFIX/zlib/lib -L$LINK_PREFIX/sqlite/lib -L$LINK_PREFIX/libffi/lib -L$LINK_PREFIX/libpng/lib -L$LINK_PREFIX/zstd/lib"
 export PKG_CONFIG_PATH="$LINK_PREFIX/openssl@3/lib/pkgconfig:$LINK_PREFIX/zlib/lib/pkgconfig:$LINK_PREFIX/sqlite/lib/pkgconfig:$LINK_PREFIX/libffi/lib/pkgconfig:$LINK_PREFIX/libpng/lib/pkgconfig:$LINK_PREFIX/zstd/lib/pkgconfig"
 
-# locale
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
+# ripgrep
 export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
 
-# zoxide
-if type "zoxide" 2>&1 > /dev/null; then
-    eval "$(zoxide init zsh)"
-fi
+# repo-man
+eval "$(_REPO_MAN_COMPLETE=zsh_source repo-man)"
 
-export PATH="$PATH:$HOME/.local/bin"
-
-export STARSHIP_CONFIG="$HOME/.starship.toml"
-if type "starship" 2>&1 > /dev/null; then
-    eval "$(starship init zsh)"
-fi
-
-if [ -f $HOME/.asdf/asdf.sh ]; then
-    . $HOME/.asdf/asdf.sh
-    fpath=(${ASDF_DIR}/completions $fpath)
-    autoload -Uz compinit && compinit
-fi
+# Profiling; uncomment next line and first line
+# zprof
