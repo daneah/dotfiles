@@ -90,5 +90,12 @@ export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
 # repo-man
 eval "$(_REPO_MAN_COMPLETE=zsh_source repo-man)"
 
+# asdf
+if [ -f $HOME/.asdf/asdf.sh ]; then
+    . $HOME/.asdf/asdf.sh
+    fpath=(${ASDF_DIR}/completions $fpath)
+    autoload -Uz compinit && compinit
+fi
+
 # Profiling; uncomment next line and first line
 # zprof
