@@ -91,6 +91,10 @@ nmap <Left> <nop>
 nmap <Right> <nop>
 " }}}
 
+" Mouse {{{
+set mouse=a
+" }}}
+
 " Scrolling {{{
 set sidescroll=1
 set sidescrolloff=30
