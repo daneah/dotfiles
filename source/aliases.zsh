@@ -75,5 +75,6 @@ alias c='clear'
 alias svi='sudo vi'
 alias wget='wget -c'
 alias named='find . -name'
-alias vi=vim
+alias vi=nvim
+alias vim=nvim
 alias dif='diff --side-by-side --suppress-common-lines'

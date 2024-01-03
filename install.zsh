@@ -16,9 +16,9 @@ main() {
     readonly local src_dir=source
     readonly local custom_dir=${HOME}/.zsh-custom
 
-    mkdir -p $HOME/.vim/undo
-
     pushd_quiet $project_dir
+
+    ln -i -s $project_dir/nvim ${HOME}/.config/nvim
 
     if [ $? -eq 0 ]; then
         pushd_quiet $src_dir
