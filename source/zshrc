@@ -66,8 +66,9 @@ fi
 export PYTHONSTARTUP=$HOME/.pystartup
 export PYTHONDONTWRITEBYTECODE=1
 
-# vim
-export EDITOR=vim
+# neovim
+export EDITOR=nvim
+export GIT_EDITOR=nvim
 
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
