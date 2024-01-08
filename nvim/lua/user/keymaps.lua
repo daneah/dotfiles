@@ -54,3 +54,4 @@ keymap("v", "K", ":move .-2<CR>gv-gv", opts)
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("v", "p", "\"_dP", opts)
+-- Move lines
