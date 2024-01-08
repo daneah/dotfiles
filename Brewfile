@@ -17,7 +17,7 @@ brew "readline"
 brew "zsh"
 
 # File editing
-brew "vim"
+brew "neovim"
 
 # Git[Hub]
 brew "gh"
@@ -42,6 +42,7 @@ brew "cookiecutter"
 brew "ctags"
 brew "devd"
 brew "direnv"
+brew "fd"
 brew "fzf"
 brew "gnupg"
 brew "helm"
