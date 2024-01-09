@@ -20,7 +20,15 @@ return {
         'neovim/nvim-lspconfig',
         config = function()
             local lsp_config = require('lspconfig')
-            lsp_config.lua_ls.setup({})
+            lsp_config.lua_ls.setup({
+                settings = {
+                    Lua = {
+                        diagnostics = {
+                            globals = {'vim'},
+                        },
+                    },
+                },
+            })
             lsp_config.pyright.setup({})
         end
     },

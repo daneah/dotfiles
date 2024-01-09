@@ -96,20 +96,6 @@ vim.opt.laststatus = 2
 vim.opt.wildmenu = true
 -- Status bar }}}
 
--- TODO: Status line {{{
-vim.opt.statusline = ""
-vim.opt.statusline:append "%r%m"
-vim.opt.statusline:append "%y %F"
-vim.opt.statusline:append "%="
-vim.opt.statusline:append "Line: "
-vim.opt.statusline:append "%3l "
-vim.opt.statusline:append "/ "
-vim.opt.statusline:append "%P "
-vim.opt.statusline:append "| "
-vim.opt.statusline:append "Column: "
-vim.opt.statusline:append "%-3c"
--- TODO: Status line }}}
-
 -- Folding {{{
 vim.opt.foldenable = true
 vim.opt.foldmethod = "indent"

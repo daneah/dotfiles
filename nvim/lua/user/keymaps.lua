@@ -1,18 +1,22 @@
-opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = true }
 
-keymap = vim.api.nvim_set_keymap
+local keymap = vim.api.nvim_set_keymap
 
 keymap("", ",", "<nop>", opts)
 vim.g.mapleader = ","
 
-keymap("n", ";", ":", opts)
+keymap("n", ";", ":", {})
 keymap("n", "<Leader>w", ":setlocal wrap!<CR>", opts)
 keymap("n", "<Leader>l", ":setlocal number!<CR>", opts)
 keymap("n", "<Leader>r", ":setlocal relativenumber!<CR>", opts)
 keymap("n", "<space>", "/", opts)
 keymap("n", "<Leader><space>", ":set hlsearch!<CR>", opts)
 keymap("i", "<S-Tab>", "<C-o><<", opts)
-keymap("n", "<Leader>e", ":Lex 30<cr>", opts)
+
+-- File tree
+keymap("n", "<Leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<Leader>ft", ":NvimTreeFocus<cr>", opts)
+-- File tree
 
 -- Prude mode
 keymap("i", "<Up>", "<nop>", opts)
