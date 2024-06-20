@@ -18,6 +18,7 @@ vim.opt.smartindent = true
 vim.cmd "filetype plugin on"
 vim.cmd "filetype plugin indent on"
 vim.cmd "autocmd BufNewFile,BufRead *.p8 set syntax=lua"
+vim.cmd "autocmd BufNewFile,BufRead justfile set syntax=make"
 vim.cmd "autocmd BufNewFile,BufRead *.vue set filetype=html"
 vim.cmd "autocmd BufNewFile,BufRead *.md,*.mdx set wrap"
 vim.cmd "autocmd BufNewFile,BufRead *.mdx set filetype=javascript"
