@@ -76,9 +76,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # GPG
 export GPG_TTY=$(tty)
 
-# MySQL
-export PATH="/usr/local/opt/mysql@5.7/bin:${PATH}"
-
 # Link against Homebrew versions of libraries
 local -r LINK_PREFIX="/opt/homebrew/opt"
 export CFLAGS="-I$LINK_PREFIX/openssl@3/include -I$LINK_PREFIX/zlib/include -I$LINK_PREFIX/sqlite/include -I$LINK_PREFIX/libffi/include -I$LINK_PREFIX/libpng/include -I$LINK_PREFIX/zstd/include"
@@ -87,9 +84,6 @@ export PKG_CONFIG_PATH="$LINK_PREFIX/openssl@3/lib/pkgconfig:$LINK_PREFIX/zlib/l
 
 # ripgrep
 export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
-
-# repo-man
-eval "$(_REPO_MAN_COMPLETE=zsh_source repo-man)"
 
 # asdf
 if [ -f $HOME/.asdf/asdf.sh ]; then
@@ -100,3 +94,5 @@ fi
 
 # Profiling; uncomment next line and first line
 # zprof
+
+
