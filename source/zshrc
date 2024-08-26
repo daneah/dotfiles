@@ -10,7 +10,7 @@ setopt hist_ignore_all_dups
 setopt hist_reduce_blanks
 
 zstyle ':completion:*' menu select
-fpath+=~/.zfunc
+fpath+="$HOME/.zfunc"
 
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -86,16 +86,18 @@ export PKG_CONFIG_PATH="$LINK_PREFIX/openssl@3/lib/pkgconfig:$LINK_PREFIX/zlib/l
 export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
 
 # asdf
-if [ -f $HOME/.asdf/asdf.sh ]; then
-    . $HOME/.asdf/asdf.sh
+if [ -f ${ASDF_DIR}/asdf.sh ]; then
+    . ${ASDF_DIR}/asdf.sh
     fpath=(${ASDF_DIR}/completions $fpath)
-    autoload -Uz compinit && compinit
 fi
+
+autoload -Uz compinit && compinit
+
+eval "$(register-python-argcomplete pipx)"
+
+. "$HOME/.cargo/env"
+
+# eval "$(devbox global shellenv --init-hook)"
 
 # Profiling; uncomment next line and first line
 # zprof
-
-
-
-
-
