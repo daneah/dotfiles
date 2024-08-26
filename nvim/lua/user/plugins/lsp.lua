@@ -12,6 +12,7 @@ return {
                 ensure_installed = {
                     'lua_ls',
                     'pyright',
+                    'yamlls',
                 }
             })
         end
@@ -30,6 +31,7 @@ return {
                 },
             })
             lsp_config.pyright.setup({})
+            lsp_config.yamlls.setup({})
         end
     },
     {
