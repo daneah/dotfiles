@@ -7,33 +7,48 @@ import rlcompleter
 import readline
 
 
-HISTORY_FILE_PATH = os.path.expanduser('~/.python_history')
+HISTORY_FILE_PATH = os.path.expanduser("~/.python_history")
 
 
 class IndentableCompleter(rlcompleter.Completer):
     def complete(self, text, state):
-        if text == '' or text.isspace():
-            return ['    ', None][state]
+        if text == "" or text.isspace():
+            return ["    ", None][state]
         else:
             return super().complete(text, state)
 
 
 def save_history(history_file_path=HISTORY_FILE_PATH):
     import sys
-    if sys.version_info.major > 2:
+
+    if sys.version_info.major > 2 and sys.version_info.minor < 13:
         import readline
+
         readline.write_history_file(history_file_path)
 
 
 def load_history(history_file_path=HISTORY_FILE_PATH):
-    if sys.version_info.major > 2 and os.path.exists(history_file_path):
+    if (
+        sys.version_info.major > 2
+        and sys.version_info.minor < 13
+        and os.path.exists(history_file_path)
+    ):
         readline.read_history_file(history_file_path)
 
 
 load_history()
 
-readline.parse_and_bind('tab: complete')
+readline.parse_and_bind("tab: complete")
 readline.set_completer(IndentableCompleter().complete)
 
 atexit.register(save_history)
-del os, atexit, readline, rlcompleter, sys, save_history, load_history, HISTORY_FILE_PATH
+del (
+    os,
+    atexit,
+    readline,
+    rlcompleter,
+    sys,
+    save_history,
+    load_history,
+    HISTORY_FILE_PATH,
+)
