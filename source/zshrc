@@ -101,3 +101,5 @@ eval "$(register-python-argcomplete pipx)"
 
 # Profiling; uncomment next line and first line
 # zprof
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
