@@ -1,6 +1,2 @@
-source/vim/undo/
-source/vim/backup/
-source/vim/swap/
-source/vim/colors/
-source/vim/pack/kite/
 .netrwhist
+nvim/spell

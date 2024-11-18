@@ -108,4 +108,9 @@ vim.opt.foldlevelstart = 10
 vim.opt.modelines = 1
 -- Modelines }}}
 
+-- Spelling {{{
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
+-- Spelling }}}
+
 -- vim:foldmethod=marker:foldlevel=0
