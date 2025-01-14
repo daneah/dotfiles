@@ -97,6 +97,9 @@ eval "$(register-python-argcomplete pipx)"
 
 . "$HOME/.cargo/env"
 
+export GOPATH=$HOME/.go
+export PATH="$GOPATH/bin:$PATH"
+
 # eval "$(devbox global shellenv --init-hook)"
 
 # Profiling; uncomment next line and first line
