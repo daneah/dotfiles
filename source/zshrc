@@ -30,7 +30,6 @@ DISABLE_UPDATE_PROMPT=true
 export STARSHIP_CONFIG="$HOME/.starship.toml"
 
 plugins=( \
-    asdf \
     brew \
     direnv \
     docker \
@@ -99,6 +98,13 @@ eval "$(register-python-argcomplete pipx)"
 
 export GOPATH=$HOME/.go
 export PATH="$GOPATH/bin:$PATH"
+
+export ASDF_DATA_DIR="$HOME/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
+
+export NODE_BUILD_DEFINITIONS="$LINK_PREFIX/node-build-update-defs/share/node-build"
+
+eval "$(fzf --zsh)"
 
 # eval "$(devbox global shellenv --init-hook)"
 
