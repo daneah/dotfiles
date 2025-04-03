@@ -1,5 +1,8 @@
 [diff]
+    algorithm = histogram
     mnemonicprefix = true
+    colorMoved = plain
+    renames = true
 
 [color "status"]
     header = blue
@@ -20,6 +23,7 @@
 
 [push]
     default = simple
+    autoSetupRemote = true
 
 [advice]
     statusHints = false
@@ -52,5 +56,14 @@
 [user]
     name = Dane Hillard
     email = github@danehillard.com
+
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
+[help]
+    autocorrect = prompt
+
+[tag]
+    sort = version:refname
+
+
