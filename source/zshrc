@@ -80,6 +80,7 @@ local -r LINK_PREFIX="/opt/homebrew/opt"
 export CFLAGS="-I$LINK_PREFIX/readline/include -I$LINK_PREFIX/openssl@3/include -I$LINK_PREFIX/zlib/include -I$LINK_PREFIX/sqlite/include -I$LINK_PREFIX/libffi/include -I$LINK_PREFIX/libpng/include -I$LINK_PREFIX/zstd/include"
 export LDFLAGS="-L$LINK_PREFIX/readline/lib -L$LINK_PREFIX/openssl@3/lib -L$LINK_PREFIX/zlib/lib -L$LINK_PREFIX/sqlite/lib -L$LINK_PREFIX/libffi/lib -L$LINK_PREFIX/libpng/lib -L$LINK_PREFIX/zstd/lib"
 export PKG_CONFIG_PATH="$LINK_PREFIX/readline/lib/pkgconfig:$LINK_PREFIX/openssl@3/lib/pkgconfig:$LINK_PREFIX/zlib/lib/pkgconfig:$LINK_PREFIX/sqlite/lib/pkgconfig:$LINK_PREFIX/libffi/lib/pkgconfig:$LINK_PREFIX/libpng/lib/pkgconfig:$LINK_PREFIX/zstd/lib/pkgconfig"
+brew completions link
 
 # ripgrep
 export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
@@ -111,4 +112,4 @@ eval "$(fzf --zsh)"
 # Profiling; uncomment next line and first line
 # zprof
 
-fpath+=~/.zfunc; autoload -Uz compinit; compinit
+autoload -Uz compinit; compinit
