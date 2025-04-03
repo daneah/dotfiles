@@ -86,6 +86,7 @@ return {
             })
 
             lsp_config.gitlab_ci_ls.setup({})
+            lsp_config.gleam.setup({})
             lsp_config.graphql.setup({})
             lsp_config.jsonls.setup({})
             lsp_config.ruff.setup({})
