@@ -8,14 +8,14 @@ local function set_python_lsp()
         python_path = string.gsub(result, "%s+", "") .. '/bin/python'
     end
 
-    local lsp_config = require('lspconfig')
-    lsp_config.pyright.setup({
+    vim.lsp.config("pyright", {
         settings = {
             python = {
                 pythonPath = python_path,
             },
         },
     })
+    vim.lsp.enable("pyright")
 end
 vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, { pattern = '*', callback = set_python_lsp })
 
@@ -25,8 +25,7 @@ local function set_volar_lsp()
         local node_path = handle:read("*a")
         local typescript_path = string.gsub(node_path, "/bin/node\n", "") .. '/lib/node_modules/typescript/lib'
 
-        local lsp_config = require('lspconfig')
-        lsp_config.volar.setup({
+        vim.lsp.config("volar", {
             init_options = {
                 typescript = {
                     tsdk = typescript_path,
@@ -39,6 +38,7 @@ local function set_volar_lsp()
                 end
             end
         })
+        vim.lsp.enable("volar")
     end
 end
 vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, { pattern = '*', callback = set_volar_lsp })
@@ -62,37 +62,39 @@ return {
                     'pyright',
                     'ruff',
                     'ts_ls',
-                    'volar',
                     'yamlls',
-                }
+                },
+                automatic_enable = false,
             })
         end
     },
     {
         'neovim/nvim-lspconfig',
         config = function()
-            local lsp_config = require('lspconfig')
-            local mason_registry = require('mason-registry')
-            local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server'
+            local vue_language_server_path = vim.fn.expand "$MASON/packages/codelldb"
 
-            lsp_config.lua_ls.setup({
+            vim.lsp.config("lua_ls", {
                 settings = {
                     Lua = {
                         diagnostics = {
                             globals = {'vim'},
                         },
+                        workspace = {
+                            library = vim.api.nvim_get_runtime_file("", true),
+                        },
                     },
                 },
             })
+            vim.lsp.enable("lua_ls")
 
-            lsp_config.gitlab_ci_ls.setup({})
-            lsp_config.gleam.setup({})
-            lsp_config.graphql.setup({})
-            lsp_config.jsonls.setup({})
-            lsp_config.ruff.setup({})
-            lsp_config.yamlls.setup({})
+            vim.lsp.enable("gitlab_ci_ls")
+            vim.lsp.enable("gleam")
+            vim.lsp.enable("graphql")
+            vim.lsp.enable("jsonls")
+            vim.lsp.enable("ruff")
+            vim.lsp.enable("yamlls")
 
-            lsp_config.ts_ls.setup({
+            vim.lsp.config("ts_ls", {
                 filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
                 init_options = {
                     plugins = {
@@ -103,8 +105,8 @@ return {
                         },
                     },
                 },
-                root_dir = lsp_config.util.root_pattern('tsconfig.json', 'jsconfig.json', 'package.json', '.git', 'yarn.lock'),
             })
+            vim.lsp.enable("ts_ls")
         end
     },
     {
@@ -114,6 +116,7 @@ return {
             null_ls.setup({
                 sources = {
                     null_ls.builtins.formatting.black,
+                    null_ls.builtins.diagnostics.proselint,
                     null_ls.builtins.formatting.prettier,
                     null_ls.builtins.formatting.stylua,
                 }

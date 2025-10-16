@@ -112,4 +112,10 @@ vim.opt.spell = true
 vim.opt.spelllang = "en_us"
 -- Spelling }}}
 
+-- Diagnostics {{{
+vim.diagnostic.config({
+  virtual_text = true
+})
+-- Diagnostics }}}
+
 -- vim:foldmethod=marker:foldlevel=0

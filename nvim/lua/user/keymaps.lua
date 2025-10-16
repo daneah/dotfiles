@@ -59,3 +59,12 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("v", "p", "\"_dP", opts)
 -- Move lines
+
+-- Navigation
+keymap("n", "<C-b>", ":lua vim.lsp.buf.definition()<cr>", opts)
+-- Navigation
+
+-- Diagnostics
+keymap("n", "<Leader>e", ":lua vim.diagnostic.open_float()<CR>", opts)
+keymap("n", "<Leader>xx", ":Trouble diagnostics toggle<CR>", opts)
+-- Diagnostics

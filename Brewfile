@@ -15,13 +15,16 @@ brew "readline"
 
 # Shell
 brew "zsh"
+brew "shellcheck"
 
 # File editing
 brew "neovim"
+brew "tree-sitter"
 
 # Git[Hub]
 brew "gh"
 brew "git"
+brew "git-lfs"
 brew "pre-commit"
 
 # Networking
@@ -38,9 +41,12 @@ brew "adr-tools"
 brew "asciinema"
 brew "awscli"
 brew "bat"
+brew "colordiff"
 brew "cookiecutter"
 brew "ctags"
+brew "datasette"
 brew "devd"
+brew "difftastic"
 brew "direnv"
 brew "fd"
 brew "fzf"

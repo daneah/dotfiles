@@ -113,3 +113,5 @@ eval "$(fzf --zsh)"
 # zprof
 
 autoload -Uz compinit; compinit
+
+alias claude="${HOME}/.claude/local/claude"
