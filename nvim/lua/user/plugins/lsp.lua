@@ -19,13 +19,13 @@ local function set_python_lsp()
 end
 vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, { pattern = '*', callback = set_python_lsp })
 
-local function set_volar_lsp()
+local function set_vue_lsp()
     local handle = io.popen('node -p "process.execPath"', 'r')
     if handle then
         local node_path = handle:read("*a")
         local typescript_path = string.gsub(node_path, "/bin/node\n", "") .. '/lib/node_modules/typescript/lib'
 
-        vim.lsp.config("volar", {
+        vim.lsp.config("vue_ls", {
             init_options = {
                 typescript = {
                     tsdk = typescript_path,
@@ -38,10 +38,10 @@ local function set_volar_lsp()
                 end
             end
         })
-        vim.lsp.enable("volar")
+        vim.lsp.enable("vue_ls")
     end
 end
-vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, { pattern = '*', callback = set_volar_lsp })
+vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, { pattern = '*', callback = set_vue_lsp })
 
 return {
     {
@@ -62,6 +62,7 @@ return {
                     'pyright',
                     'ruff',
                     'ts_ls',
+                    'vue_ls',
                     'yamlls',
                 },
                 automatic_enable = false,
