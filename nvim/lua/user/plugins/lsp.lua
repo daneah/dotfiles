@@ -1,24 +1,3 @@
-local function set_python_lsp()
-    local handle = io.popen('py -c "import sys; print(sys.prefix)"', 'r')
-    local python_path = 'python'
-
-    if handle then
-        local result = handle:read("*a")
-        handle:close()
-        python_path = string.gsub(result, "%s+", "") .. '/bin/python'
-    end
-
-    vim.lsp.config("pyright", {
-        settings = {
-            python = {
-                pythonPath = python_path,
-            },
-        },
-    })
-    vim.lsp.enable("pyright")
-end
-vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, { pattern = '*', callback = set_python_lsp })
-
 local function set_vue_lsp()
     local handle = io.popen('node -p "process.execPath"', 'r')
     if handle then
@@ -59,9 +38,9 @@ return {
                     'graphql',
                     'jsonls',
                     'lua_ls',
-                    'pyright',
                     'ruff',
                     'ts_ls',
+                    'ty',
                     'vue_ls',
                     'yamlls',
                 },
@@ -72,8 +51,6 @@ return {
     {
         'neovim/nvim-lspconfig',
         config = function()
-            local vue_language_server_path = vim.fn.expand "$MASON/packages/codelldb"
-
             vim.lsp.config("lua_ls", {
                 settings = {
                     Lua = {
@@ -93,19 +70,11 @@ return {
             vim.lsp.enable("graphql")
             vim.lsp.enable("jsonls")
             vim.lsp.enable("ruff")
+            vim.lsp.enable("ty")
             vim.lsp.enable("yamlls")
 
             vim.lsp.config("ts_ls", {
                 filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-                init_options = {
-                    plugins = {
-                        {
-                            name = "@vue/typescript-plugin",
-                            location = vue_language_server_path,
-                            languages = {"vue"},
-                        },
-                    },
-                },
             })
             vim.lsp.enable("ts_ls")
         end

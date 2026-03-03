@@ -66,5 +66,7 @@ keymap("n", "<C-b>", ":lua vim.lsp.buf.definition()<cr>", opts)
 
 -- Diagnostics
 keymap("n", "<Leader>e", ":lua vim.diagnostic.open_float()<CR>", opts)
+keymap("n", "<Leader>E", ":lua vim.lsp.buf.code_action()<CR>", { desc = "Code action" })
+
 keymap("n", "<Leader>xx", ":Trouble diagnostics toggle<CR>", opts)
 -- Diagnostics
