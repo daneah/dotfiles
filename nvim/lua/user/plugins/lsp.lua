@@ -1,27 +1,3 @@
-local function set_vue_lsp()
-    local handle = io.popen('node -p "process.execPath"', 'r')
-    if handle then
-        local node_path = handle:read("*a")
-        local typescript_path = string.gsub(node_path, "/bin/node\n", "") .. '/lib/node_modules/typescript/lib'
-
-        vim.lsp.config("vue_ls", {
-            init_options = {
-                typescript = {
-                    tsdk = typescript_path,
-                },
-            },
-            on_new_config = function(new_config, new_root_dir)
-                local lib_path = vim.fs.find('.yarn/sdks/typescript/lib', { path = new_root_dir, upward = true })[1]
-                if lib_path then
-                    new_config.init_options.typescript.tsdk = lib_path
-                end
-            end
-        })
-        vim.lsp.enable("vue_ls")
-    end
-end
-vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, { pattern = '*', callback = set_vue_lsp })
-
 return {
     {
         'williamboman/mason.nvim',
@@ -44,7 +20,6 @@ return {
                     'vue_ls',
                     'yamlls',
                 },
-                automatic_enable = false,
             })
         end
     },
@@ -65,18 +40,51 @@ return {
             })
             vim.lsp.enable("lua_ls")
 
+            local lsp_util = require('lsp-util')
+
+            local typescript_plugins = {}
+            local vue_language_server_root = lsp_util.find_mason_package("vue-language-server")
+            if vue_language_server_root then
+                local vue_typescript_plugin_path = vim.fs.joinpath(
+                  vue_language_server_root, "node_modules", "@vue", "typescript-plugin"
+                )
+                table.insert(typescript_plugins, {
+                    name = "@vue/typescript-plugin",
+                    location = vue_typescript_plugin_path,
+                    languages = { "vue" },
+                    configNamespace = "typescript",
+                })
+            end
+
+            vim.lsp.config("vue_ls", {})
+            vim.lsp.config("ts_ls", {
+                filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+                init_options = {
+                    hostInfo = "neovim",
+                    plugins = typescript_plugins,
+                    typescript = {
+                        tsdk = lsp_util.find_tssdk(),
+                    },
+                },
+                on_new_config = function(new_config, new_root_dir)
+                  local proj_tsdk = lsp_util.find_tssdk(new_root_dir)
+                  if proj_tsdk then
+                    new_config.init_options = new_config.init_options or {}
+                    new_config.init_options.typescript = new_config.init_options.typescript or {}
+                    new_config.init_options.typescript.tsdk = proj_tsdk
+                  end
+                end,
+            })
+
             vim.lsp.enable("gitlab_ci_ls")
             vim.lsp.enable("gleam")
             vim.lsp.enable("graphql")
             vim.lsp.enable("jsonls")
             vim.lsp.enable("ruff")
-            vim.lsp.enable("ty")
-            vim.lsp.enable("yamlls")
-
-            vim.lsp.config("ts_ls", {
-                filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-            })
             vim.lsp.enable("ts_ls")
+            vim.lsp.enable("ty")
+            vim.lsp.enable("vue_ls")
+            vim.lsp.enable("yamlls")
         end
     },
     {
