@@ -14,8 +14,8 @@ keymap("n", "<Leader><space>", ":set hlsearch!<CR>", opts)
 keymap("i", "<S-Tab>", "<C-o><<", opts)
 
 -- File tree
-keymap("n", "<Leader>e", ":NvimTreeToggle<cr>", opts)
-keymap("n", "<Leader>ft", ":NvimTreeFocus<cr>", opts)
+keymap("n", "<Leader>tt", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<Leader>tf", ":NvimTreeFocus<cr>", opts)
 -- File tree
 
 -- Prude mode

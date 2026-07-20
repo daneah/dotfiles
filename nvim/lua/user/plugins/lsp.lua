@@ -15,6 +15,7 @@ return {
                     'jsonls',
                     'lua_ls',
                     'ruff',
+                    'tombi',
                     'ts_ls',
                     'ty',
                     'vue_ls',
