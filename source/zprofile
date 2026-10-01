@@ -1,2 +1,5 @@
 export PATH="$PATH:$HOME/.local/bin"
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+
+# Added by Obsidian
+export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"

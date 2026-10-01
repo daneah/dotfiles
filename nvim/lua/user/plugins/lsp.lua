@@ -10,6 +10,7 @@ return {
         config = function()
             require('mason-lspconfig').setup({
                 ensure_installed = {
+                    'copilot',
                     'gitlab_ci_ls',
                     'graphql',
                     'jsonls',
@@ -77,6 +78,16 @@ return {
                 end,
             })
 
+            vim.lsp.config("copilot", {
+              cmd = {
+                "npx",
+                "@github/copilot-language-server",
+                "--stdio",
+              },
+              root_markers = { ".git" },
+            })
+
+            vim.lsp.enable("copilot")
             vim.lsp.enable("gitlab_ci_ls")
             vim.lsp.enable("gleam")
             vim.lsp.enable("graphql")

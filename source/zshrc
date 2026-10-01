@@ -90,7 +90,7 @@ if [ -f ${ASDF_DIR}/asdf.sh ]; then
     fpath=(${ASDF_DIR}/completions $fpath)
 fi
 
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit
 
 eval "$(register-python-argcomplete pipx)"
 
@@ -111,4 +111,4 @@ eval "$(fzf --zsh)"
 # Profiling; uncomment next line and first line
 # zprof
 
-autoload -Uz compinit; compinit
+# autoload -Uz compinit; compinit
